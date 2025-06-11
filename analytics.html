@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics - PrimeRole</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f9fafb;
+            color: #374151;
+        }
+
+        .app-container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 256px;
+            background: white;
+            border-right: 1px solid #e5e7eb;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sidebar-header {
+            padding: 16px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: #7c3aed;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .logo-icon::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 16px;
+            height: 16px;
+            background: white;
+            border-radius: 50%;
+        }
+
+        .logo-text {
+            font-weight: 600;
+            color: #111827;
+            font-size: 16px;
+        }
+
+        .workspace-selector {
+            padding: 16px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .workspace-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: #374151;
+        }
+
+        .workspace-icon {
+            width: 24px;
+            height: 24px;
+            background: #f97316;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .workspace-icon::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 12px;
+            height: 12px;
+            background: white;
+            border-radius: 2px;
+        }
+
+        .navigation {
+            flex: 1;
+            padding: 16px;
+        }
+
+        .nav-button {
+            width: 100%;
+            padding: 8px 12px;
+            border: none;
+            background: none;
+            text-align: left;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 8px;
+            transition: all 0.2s;
+        }
+
+        .nav-button:hover {
+            background: #f3f4f6;
+        }
+
+        .nav-button.active {
+            background: #ede9fe;
+            color: #7c3aed;
+        }
+
+        .sidebar-footer {
+            padding: 16px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .action-button {
+            width: 100%;
+            padding: 8px 12px;
+            border: none;
+            background: none;
+            text-align: left;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 8px;
+            transition: all 0.2s;
+        }
+
+        .action-button.primary {
+            background: #7c3aed;
+            color: white;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #e5e7eb;
+            font-size: 12px;
+            color: #6b7280;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .main-header h1 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #111827;
+        }
+
+        .analytics-box {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 24px;
+            margin-bottom: 16px;
+        }
+
+        .analytics-box h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .analytics-box p {
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        .back-link {
+            color: #7c3aed;
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 16px;
+            display: inline-block;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Dark theme styles */
+        body.dark-theme {
+            background-color: #111827;
+            color: #e5e7eb;
+        }
+
+        body.dark-theme .sidebar,
+        body.dark-theme .analytics-box {
+            background-color: #1f2937;
+            border-color: #374151;
+        }
+
+        body.dark-theme .logo-text,
+        body.dark-theme .main-header h1,
+        body.dark-theme .analytics-box h3 {
+            color: #f9fafb;
+        }
+
+        body.dark-theme .nav-button,
+        body.dark-theme .action-button,
+        body.dark-theme .workspace-item,
+        body.dark-theme .user-info,
+        body.dark-theme .analytics-box p {
+            color: #9ca3af;
+        }
+
+        body.dark-theme .nav-button:hover,
+        body.dark-theme .action-button:hover {
+            background-color: #374151;
+        }
+
+        body.dark-theme .nav-button.active {
+            background-color: #4c1d95;
+            color: #a78bfa;
+        }
+
+        body.dark-theme .back-link {
+            color: #a78bfa;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <div class="logo-icon"></div>
+                    <span class="logo-text">PrimeRole</span>
+                </div>
+            </div>
+
+            <div class="workspace-selector">
+                <div class="workspace-item">
+                    <div class="workspace-icon"></div>
+                    <span class="workspace-text">Test Workspace</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+
+            <div class="navigation">
+                <button class="nav-button" onclick="location.href='/'">
+                    <i class="fas fa-arrow-left"></i>
+                    Back
+                </button>
+
+                <button class="nav-button" onclick="location.href='/'">
+                    <i class="fas fa-phone"></i>
+                    Calls logs
+                </button>
+
+                <button class="nav-button active">
+                    <i class="fas fa-chart-bar"></i>
+                    Analytics
+                </button>
+            </div>
+
+            <div class="sidebar-footer">
+                <button class="action-button primary">
+                    <i class="fas fa-puzzle-piece"></i>
+                    Install Browser Extension
+                </button>
+                <button class="action-button" id="themeToggleBtn">
+                    <i class="fas fa-moon"></i>
+                    Switch Theme
+                </button>
+                <button class="action-button">
+                    <i class="fas fa-cog"></i>
+                    Profile Settings
+                </button>
+
+                <div class="user-info">
+                    <i class="fas fa-user"></i>
+                    <div>
+                        <div>Test user</div>
+                        <div>test[...]@primerole.com</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="main-header">
+                <h1>Analytics Dashboard</h1>
+            </div>
+
+            <div class="analytics-box">
+                <h3>Call Summary Metrics</h3>
+                <p>Average call duration: 3m 45s</p>
+                <p>Positive sentiment: 68%</p>
+                <p>Follow-up rate: 45%</p>
+            </div>
+
+            <div class="analytics-box">
+                <h3>Recent Insights</h3>
+                <p>Customer interest peaked during pricing discussions.</p>
+                <p>Most queries occurred around integration capabilities.</p>
+            </div>
+
+            <a href="/" class="back-link"><i class="fas fa-arrow-left"></i> Back to Call Logs</a>
+        </div>
+    </div>
+
+    <script>
+        // Theme toggle functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggleBtn = document.getElementById('themeToggleBtn');
+            if (themeToggleBtn) {
+                themeToggleBtn.addEventListener('click', () => {
+                    document.body.classList.toggle('dark-theme');
+                    
+                    // Update icon
+                    const icon = themeToggleBtn.querySelector('i');
+                    if (document.body.classList.contains('dark-theme')) {
+                        icon.classList.remove('fa-moon');
+                        icon.classList.add('fa-sun');
+                        themeToggleBtn.innerHTML = '<i class="fas fa-sun"></i> Switch Theme';
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        icon.classList.remove('fa-sun');
+                        icon.classList.add('fa-moon');
+                        themeToggleBtn.innerHTML = '<i class="fas fa-moon"></i> Switch Theme';
+                        localStorage.setItem('theme', 'light');
+                    }
+                });
+
+                // Check for saved theme preference
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme === 'dark') {
+                    document.body.classList.add('dark-theme');
+                    const icon = themeToggleBtn.querySelector('i');
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                    themeToggleBtn.innerHTML = '<i class="fas fa-sun"></i> Switch Theme';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
