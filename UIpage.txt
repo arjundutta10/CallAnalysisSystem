@@ -1,5 +1,0 @@
-import Component from "../call-analytics-dashboard"
-
-export default function Page() {
-  return <Component />
-}
