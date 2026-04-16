@@ -1,0 +1,1974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PrimeRole - Call Analytics</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #f9fafb;
+            color: #374151;
+            line-height: 1.5;
+        }
+        .app-container {
+            display: flex;
+            height: 100vh;
+        }
+        /* Sidebar Styles */
+        .sidebar {
+            width: 256px;
+            background: white;
+            border-right: 1px solid #e5e7eb;
+            display: flex;
+            flex-direction: column;
+        }
+        .sidebar-header {
+            padding: 16px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: #7c3aed;
+            border-radius: 50%;
+            position: relative;
+        }
+        .logo-icon::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 16px;
+            height: 16px;
+            background: white;
+            border-radius: 50%;
+        }
+        .logo-text {
+            font-weight: 600;
+            color: #111827;
+            font-size: 16px;
+        }
+        .workspace-selector {
+            padding: 16px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .workspace-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: #374151;
+        }
+        .workspace-icon {
+            width: 24px;
+            height: 24px;
+            background: #f97316;
+            border-radius: 4px;
+            position: relative;
+        }
+        .workspace-icon::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 12px;
+            height: 12px;
+            background: white;
+            border-radius: 2px;
+        }
+        .navigation {
+            flex: 1;
+            padding: 16px;
+        }
+        .nav-button {
+            width: 100%;
+            padding: 8px 12px;
+            border: none;
+            background: none;
+            text-align: left;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 8px;
+            transition: all 0.2s;
+        }
+        .nav-button:hover {
+            background: #f3f4f6;
+        }
+        .nav-button.active {
+            background: #ede9fe;
+            color: #7c3aed;
+        }
+        .sidebar-footer {
+            padding: 16px;
+            border-top: 1px solid #e5e7eb;
+        }
+        .action-button {
+            width: 100%;
+            padding: 8px 12px;
+            border: none;
+            background: none;
+            text-align: left;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 8px;
+            transition: all 0.2s;
+        }
+        .action-button.primary {
+            background: #7c3aed;
+            color: white;
+        }
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #e5e7eb;
+            font-size: 12px;
+            color: #6b7280;
+        }
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .main-header {
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .breadcrumb {
+            font-size: 14px;
+            color: #6b7280;
+        }
+        .call-status {
+            color: #7c3aed;
+            font-size: 14px;
+        }
+        /* Call Header */
+        .call-header {
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .call-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .call-avatar {
+            width: 40px;
+            height: 40px;
+            background: #dcfce7;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #16a34a;
+        }
+        .call-details h2 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 4px;
+        }
+        .call-phone {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 14px;
+            color: #6b7280;
+        }
+        .call-actions {
+            display: flex;
+            gap: 8px;
+        }
+        .action-btn {
+            width: 40px;
+            height: 40px;
+            border: none;
+            background: #7c3aed;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+        .action-btn:hover {
+            background: #6d28d9;
+        }
+        /* Content Layout */
+        .content-layout {
+            flex: 1;
+            display: flex;
+            min-height: 0;
+        }
+        .transcript-section {
+             flex: 1;
+             padding: 24px;
+             background: white;
+             display: flex;
+             flex-direction: column;
+             min-height: 0;
+             height: 100%;
+        }
+        .tab-navigation {
+            display: flex;
+            gap: 32px;
+            margin-bottom: 24px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .tab-button {
+            padding: 12px 0;
+            border: none;
+            background: none;
+            font-size: 16px;
+            font-weight: 500;
+            color: #6b7280;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+        .tab-button.active {
+            color: #7c3aed;
+            border-bottom-color: #7c3aed;
+        }
+        .tab-content {
+            display: none;
+            flex: 1;
+            min-height: 0;
+        }
+        .tab-content.active {
+           display: flex;
+           flex-direction: column;
+           flex: 1;
+           min-height: 0;
+           height: 100%;
+        }
+        /* Transcript Styles */
+        .transcript-header {
+            font-size: 18px;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 24px;
+        }
+        .transcript-list {
+            flex: 1;
+            overflow-y: auto;
+            margin-bottom: 24px;
+            max-height: calc(100vh - 300px);
+            min-height: 190px;
+        }
+        .transcript-item {
+             display: flex;
+             gap: 2px;
+             margin-bottom: 2px;
+             padding: 10px;
+             border-radius: 8px;
+             transition: background-color 0.2s;
+        }
+        .transcript-item.active {
+            background-color: #f5f3ff;
+            border-radius: 6px;
+            padding: 8px;
+        }
+        .transcript-meta {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 60px;
+        }
+        .speaker-indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-bottom: 4px;
+        }
+        .speaker-indicator.aditya {
+            background: #7c3aed;
+        }
+        .speaker-indicator.arif {
+            background: #ec4899;
+        }
+        .timestamp {
+            font-size: 12px;
+            color: #6b7280;
+            cursor: pointer;
+        }
+        .timestamp:hover {
+            color: #7c3aed;
+            text-decoration: underline;
+        }
+        .transcript-content {
+            flex: 1;
+        }
+        .speaker-name {
+            font-weight: 500;
+            font-size: 14px;
+            margin-bottom: 3px;
+        }
+        .speaker-name.aditya {
+            color: #7c3aed;
+        }
+        .speaker-name.arif {
+            color: #ec4899;
+        }
+        .transcript-text {
+            color: #374151;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        /* Audio Controls */
+        .audio-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+            border-top: 1px solid #e5e7eb;
+            margin-bottom: 32px;
+        }
+        .time-display {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: #6b7280;
+        }
+        .current-time {
+            font-weight: 500;
+        }
+        .total-time {
+            opacity: 0.7;
+        }
+        .playback-controls {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .control-buttons {
+            display: flex;
+            gap: 8px;
+        }
+        .control-btn {
+            width: 32px;
+            height: 32px;
+            border: none;
+            background: none;
+            color: #6b7280;
+            cursor: pointer;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+        .control-btn:hover {
+            background: #f3f4f6;
+            color: #7c3aed;
+        }
+        .control-btn.play-pause {
+            background-color: #7c3aed;
+            color: white;
+        }
+        .control-btn.play-pause:hover {
+            background-color: #6d28d9;
+            color: white;
+        }
+        .speed-control {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .speed-value {
+            cursor: pointer;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 14px;
+            color: #6b7280;
+        }
+        .speed-value:hover {
+            background: #f3f4f6;
+            color: #7c3aed;
+        }
+        .speed-dropdown {
+            position: relative;
+        }
+        .speed-options {
+            display: none;
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            padding: 4px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 8px;
+            z-index: 10;
+        }
+        .speed-options.show {
+            display: block;
+        }
+        .speed-option {
+            padding: 4px 12px;
+            font-size: 14px;
+            color: #6b7280;
+            cursor: pointer;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+        .speed-option:hover {
+            background: #f3f4f6;
+            color: #7c3aed;
+        }
+        .speed-option.active {
+            color: #7c3aed;
+            font-weight: 500;
+        }
+        /* Volume Controls */
+        .volume-control {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .volume-slider {
+            width: 80px;
+            height: 4px;
+            background: #e5e7eb;
+            border-radius: 2px;
+            position: relative;
+            cursor: pointer;
+        }
+        .volume-level {
+            height: 100%;
+            background: #7c3aed;
+            border-radius: 2px;
+            width: 80%;
+        }
+        .volume-handle {
+            width: 12px;
+            height: 12px;
+            background: #7c3aed;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            left: 80%;
+            cursor: pointer;
+        }
+        .volume-handle:hover {
+            transform: translate(-50%, -50%) scale(1.2);
+        }
+        /* Audio Timeline */
+        .audio-timeline {
+            margin-top: 0px;
+        }
+        .timeline-speaker {
+            margin-bottom: 2px;
+        }
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .speaker-info {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .speaker-info.aditya {
+            color: #7c3aed;
+        }
+        .speaker-info.arif {
+            color: #ec4899;
+        }
+        .talk-time {
+            font-size: 14px;
+            color: #6b7280;
+        }
+        .timeline-container {
+            position: relative;
+            height: 40px;
+            background: #f9fafb;
+            border-radius: 6px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .timeline-container:hover .timeline-progress {
+            opacity: 0.2;
+        }
+        .timeline-bars {
+            display: flex;
+            align-items: end;
+            height: 100%;
+            padding: 8px;
+            gap: 1px;
+        }
+        .timeline-bar {
+            flex: 1;
+            min-width: 2px;
+            border-radius: 1px;
+            transition: all 0.2s;
+        }
+        .timeline-bar.aditya {
+            background: #7c3aed;
+        }
+        .timeline-bar.arif {
+            background: #ec4899;
+        }
+        .timeline-bar:hover {
+            opacity: 0.8;
+        }
+        .transcript-item:hover {
+            background-color: #f5f3ff;
+        }
+        .playhead {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #111827;
+            left: 0%;
+            z-index: 10;
+        }
+        .playhead::before {
+            content: "";
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            width: 10px;
+            height: 10px;
+            background: #111827;
+            border-radius: 50%;
+        }
+        .timeline-progress {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: rgba(124, 58, 237, 0.1);
+            width: 0%;
+            pointer-events: none;
+        }
+        /* Hidden audio element */
+        .audio-player {
+            display: none;
+        }
+        /* Right Sidebar */
+        .right-sidebar {
+            width: 320px;
+            background: white;
+            border-left: 1px solid #e5e7eb;
+            padding: 24px;
+            overflow-y: auto;
+        }
+        .sidebar-section {
+            margin-bottom: 32px;
+        }
+        .sidebar-section h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 16px;
+        }
+        .summary-text {
+            font-size: 14px;
+            color: #6b7280;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+        .action-items-text {
+            font-size: 14px;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+        .topics-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .topic-tag {
+            padding: 6px 12px;
+            background: #f3f4f6;
+            border-radius: 16px;
+            font-size: 12px;
+            color: #374151;
+            border: 1px solid #e5e7eb;
+        }
+        /* Upload Interface */
+        .upload-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 32px;
+        }
+        .upload-box {
+            border: 2px dashed #d1d5db;
+            border-radius: 8px;
+            padding: 32px;
+            text-align: center;
+            background: white;
+            max-width: 400px;
+            width: 100%;
+        }
+        .upload-icon {
+            font-size: 48px;
+            color: #9ca3af;
+            margin-bottom: 16px;
+        }
+        .upload-box h3 {
+            font-size: 18px;
+            font-weight: 500;
+            color: #111827;
+            margin-bottom: 8px;
+        }
+        .upload-box p {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 16px;
+        }
+        .upload-button {
+            background: #7c3aed;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .upload-box input[type="file"] {
+            display: none;
+        }
+        /* Flash Messages */
+        .flash-messages {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .flash-message {
+            padding: 12px 16px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-width: 300px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .flash-message.success {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            color: #065f46;
+        }
+        .flash-message.error {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            color: #991b1b;
+        }
+        .flash-message.info {
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            color: #1e40af;
+        }
+        /* Dark theme styles */
+        body.dark-theme {
+            background-color: #111827;
+            color: #e5e7eb;
+        }
+        body.dark-theme .sidebar,
+        body.dark-theme .main-header,
+        body.dark-theme .call-header,
+        body.dark-theme .transcript-section,
+        body.dark-theme .right-sidebar,
+        body.dark-theme .upload-box {
+            background-color: #1f2937;
+            border-color: #374151;
+        }
+        body.dark-theme .logo-text,
+        body.dark-theme .call-details h2,
+        body.dark-theme .sidebar-section h3,
+        body.dark-theme .transcript-header,
+        body.dark-theme .upload-box h3 {
+            color: #f9fafb;
+        }
+        body.dark-theme .nav-button,
+        body.dark-theme .action-button,
+        body.dark-theme .breadcrumb,
+        body.dark-theme .call-phone,
+        body.dark-theme .timestamp,
+        body.dark-theme .tab-button,
+        body.dark-theme .time-display,
+        body.dark-theme .control-btn,
+        body.dark-theme .speed-value,
+        body.dark-theme .speed-option,
+        body.dark-theme .summary-text,
+        body.dark-theme .action-items-text,
+        body.dark-theme .upload-box p,
+        body.dark-theme .user-info {
+            color: #9ca3af;
+        }
+        body.dark-theme .nav-button:hover,
+        body.dark-theme .action-button:hover {
+            background-color: #374151;
+        }
+        body.dark-theme .transcript-text {
+        color: #ffffff;
+        }
+        body.dark-theme .nav-button.active {
+            background-color: #4c1d95;
+            color: #a78bfa;
+        }
+        body.dark-theme .transcript-item:hover,
+        body.dark-theme .transcript-item.active {
+            background-color: #374151;
+        }
+        body.dark-theme .topic-tag {
+            background-color: #374151;
+            border-color: #4b5563;
+            color: #d1d5db;
+        }
+        body.dark-theme .timeline-container {
+            background-color: #111827;
+        }
+        body.dark-theme .volume-slider {
+            background-color: #4b5563;
+        }
+
+        /* Advanced Sentiment Analytics Styles */
+        .sentiment-analytics-container {
+            margin-top: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        .sentiment-card {
+            background: white;
+            padding: 24px;
+            border-radius: 0.75rem;
+            box-shadow: 0 1px 3px rgb(0 0 0 / 0.1);
+            color: #374151;
+            max-width: 600px;
+            width: 100%;
+        }
+        .sentiment-card h3 {
+            font-weight: 600;
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+        canvas {
+            /* Make charts full width of card */
+            width: 100% !important;
+            height: 250px !important;
+        }
+
+        /* Modern Sentiment Analysis Styles */
+        .sentiment-analysis-modern {
+            padding: 24px 0;
+            max-width: 800px;
+        }
+
+        .sentiment-overview {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 32px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .sentiment-label {
+            font-size: 16px;
+            font-weight: 500;
+            color: #374151;
+        }
+
+        .sentiment-badge {
+            display: flex;
+            align-items: center;
+        }
+
+        .sentiment-pill {
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: capitalize;
+        }
+
+        .sentiment-pill.positive {
+            background-color: #dcfce7;
+            color: #166534;
+        }
+
+        .sentiment-pill.negative {
+            background-color: #fef2f2;
+            color: #991b1b;
+        }
+
+        .sentiment-pill.neutral {
+            background-color: #f3f4f6;
+            color: #374151;
+        }
+
+        .highlights-section {
+            margin-bottom: 32px;
+        }
+
+        .highlights-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .highlights-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: #374151;
+        }
+
+        .highlights-count {
+            background-color: #f3f4f6;
+            color: #6b7280;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 500;
+            min-width: 24px;
+            text-align: center;
+        }
+
+        .highlights-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .highlight-item {
+            padding: 16px;
+            border-radius: 8px;
+            border-left: 4px solid;
+        }
+
+        .highlight-item.positive {
+            background-color: #f0fdf4;
+            border-left-color: #22c55e;
+        }
+
+        .highlight-item.negative {
+            background-color: #fef2f2;
+            border-left-color: #ef4444;
+        }
+
+        .speaker-name {
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #111827;
+        }
+
+        .highlight-item.positive .speaker-name {
+            color: #166534;
+        }
+
+        .highlight-item.negative .speaker-name {
+            color: #991b1b;
+        }
+
+        .highlight-text {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #374151;
+        }
+
+        .highlight {
+            font-weight: 600;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        .highlight.positive {
+            background-color: #bbf7d0;
+            color: #166534;
+        }
+
+        .highlight.negative {
+            background-color: #fecaca;
+            color: #991b1b;
+        }
+
+        /* Dark theme support for sentiment analysis */
+        body.dark-theme .sentiment-analysis-modern {
+            color: #e5e7eb;
+        }
+
+        body.dark-theme .sentiment-label,
+        body.dark-theme .highlights-title {
+            color: #f9fafb;
+        }
+
+        body.dark-theme .sentiment-pill.positive {
+            background-color: #166534;
+            color: #bbf7d0;
+        }
+
+        body.dark-theme .sentiment-pill.negative {
+            background-color: #991b1b;
+            color: #fecaca;
+        }
+
+        body.dark-theme .sentiment-pill.neutral {
+            background-color: #374151;
+            color: #d1d5db;
+        }
+
+        body.dark-theme .highlights-count {
+            background-color: #374151;
+            color: #9ca3af;
+        }
+
+        body.dark-theme .highlight-item.positive {
+            background-color: #064e3b;
+            border-left-color: #10b981;
+        }
+
+        body.dark-theme .highlight-item.negative {
+            background-color: #7f1d1d;
+            border-left-color: #f87171;
+        }
+
+        body.dark-theme .highlight-item.positive .speaker-name {
+            color: #6ee7b7;
+        }
+
+        body.dark-theme .highlight-item.negative .speaker-name {
+            color: #fca5a5;
+        }
+
+        body.dark-theme .highlight-text {
+            color: #d1d5db;
+        }
+
+        body.dark-theme .highlight.positive {
+            background-color: #065f46;
+            color: #6ee7b7;
+        }
+
+        body.dark-theme .highlight.negative {
+            background-color: #991b1b;
+            color: #fca5a5;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <div class="logo-icon"></div>
+                    <span class="logo-text">PrimeRole</span>
+                </div>
+            </div>
+
+            <div class="workspace-selector">
+                <div class="workspace-item">
+                    <div class="workspace-icon"></div>
+                    <span class="workspace-text">Test Workspace</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+
+            <div class="navigation">
+                <button class="nav-button">
+                    <i class="fas fa-arrow-left"></i>
+                    Back
+                </button>
+
+                <button class="nav-button active">
+                    <i class="fas fa-phone"></i>
+                    Calls logs
+                </button>
+                <button class="nav-button" onclick="location.href='/analytics';">
+                    <i class="fas fa-chart-bar"></i>
+                    Analytics
+                </button>
+            </div>
+
+            <div class="sidebar-footer">
+                <button class="action-button primary">
+                    <i class="fas fa-puzzle-piece"></i>
+                    Install Browser Extension
+                </button>
+                <button class="action-button" id="themeToggleBtn">
+                    <i class="fas fa-moon"></i>
+                    Switch Theme
+                </button>
+                <button class="action-button">
+                    <i class="fas fa-cog"></i>
+                    Profile Settings
+                </button>
+
+                <div class="user-info">
+                    <i class="fas fa-user"></i>
+                    <div>
+                        <div>Test user</div>
+                        <div>test[...]@primerole.com</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            {% if not transcript %}
+            <!-- Header for Upload -->
+            <div class="main-header">
+                <div class="breadcrumb">Call logs</div>
+            </div>
+
+            <!-- Upload Interface -->
+            <div class="upload-container">
+                <form method="POST" enctype="multipart/form-data" id="uploadForm">
+                    <div class="upload-box">
+                        <i class="fas fa-upload upload-icon"></i>
+                        <h3>Upload Audio File</h3>
+                        <p>Supported formats: MP3, WAV, M4A, FLAC, AAC, OGG (Max 100MB)</p>
+                        <input type="file" name="audio_file" id="audioFile" accept=".mp3,.wav,.m4a,.flac,.aac,.ogg" required />
+                        <label for="audioFile" class="upload-button">
+                            <i class="fas fa-upload"></i>
+                            Choose Audio File
+                        </label>
+                    </div>
+                </form>
+            </div>
+            {% else %}
+            <!-- Header for Analysis -->
+            <div class="main-header">
+                <div class="breadcrumb">Call logs</div>
+                <div class="call-status"></div>
+            </div>
+
+            <!-- Call Header -->
+            <div class="call-header">
+                <div class="call-info">
+                    <div class="call-avatar">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="call-details">
+                        <h2>{{ audio_file or 'Michael Johnson' }}</h2>
+                        <div class="call-phone">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3E%3Cpath d='M3 3h18v18H3z'/%3E%3C/svg%3E" alt="UK" style="width: 16px; height: 12px;" />
+                        </div>
+                    </div>
+                </div>
+                <div class="call-actions">
+                    <!-- Download PDF Report Button -->
+                    <button class="action-btn" onclick="downloadReport()" title="Download PDF Report">
+                        <i class="fas fa-download"></i>
+                    </button>
+                    <!-- Delete/New Recording Button -->
+                    <button class="action-btn" onclick="deleteRecording()" title="Delete & Upload New">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Content Layout -->
+            <div class="content-layout" id="contentLayout">
+                <!-- Transcript Section -->
+                <div class="transcript-section" id="transcriptSection">
+                    <!-- Tab Navigation -->
+                    <div class="tab-navigation">
+                        <button class="tab-button active" onclick="switchTab('overview')">Overview</button>
+                        <button class="tab-button" onclick="switchTab('sentiment')">Sentiment</button>
+                    </div>
+
+                    <!-- Overview Tab -->
+                    <div class="tab-content active" id="overviewTab">
+                        <h2 class="transcript-header">Transcript</h2>
+
+                        <!-- Hidden audio player -->
+                        <audio id="audioPlayer" class="audio-player" preload="metadata">
+                            <!-- If user uploaded an audio file, use it -->
+                            {% if audio_file %}
+                            <source src="{{ url_for('static', filename='uploads/' + audio_file) }}" type="audio/mpeg" />
+                            {% else %}
+                            <!-- Otherwise use a demo file -->
+                            <source src="{{ url_for('static', filename='demo/sample_call.mp3') }}" type="audio/mpeg" />
+                            {% endif %}
+                            Your browser does not support the audio element.
+                        </audio>
+
+                        <div class="transcript-list" id="transcriptList">
+                            {% if transcript and transcript|length > 0 %}
+                            {% for utterance in transcript %}
+                            <div class="transcript-item" data-start="{{ utterance.start }}" data-end="{{ utterance.end }}">
+                                <div class="transcript-meta">
+                                    <div class="speaker-indicator {{ 'aditya' if 'Speaker 1' in utterance.speaker else 'arif' }}"></div>
+                                    <div class="timestamp" onclick="jumpToTime({{ utterance.start/1000 }})">
+                                        {{ "%d:%02d"|format(utterance.start//60000, (utterance.start/1000)%60) }}
+                                    </div>
+                                </div>
+                                <div class="transcript-content">
+                                    <div class="speaker-name {{ 'aditya' if 'Speaker 1' in utterance.speaker else 'arif' }}">
+                                        {{ utterance.speaker }}
+                                    </div>
+                                    <div class="transcript-text">{{ utterance.text }}</div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            {% else %}
+                            <!-- Complete conversation for demo -->
+                            <div class="transcript-item" data-start="4000" data-end="9000">
+                                <div class="transcript-meta">
+                                    <div class="speaker-indicator aditya"></div>
+                                    <div class="timestamp" onclick="jumpToTime(4)">0:04</div>
+                                </div>
+                                <div class="transcript-content">
+                                    <div class="speaker-name aditya">Speaker 1</div>
+                                    <div class="transcript-text">Hello. Hey. Hi, Eric. This is Anadja. I'm calling you from JustCall.</div>
+                                </div>
+                            </div>
+
+                            <div class="transcript-item" data-start="9000" data-end="11000">
+                                <div class="transcript-meta">
+                                    <div class="speaker-indicator arif"></div>
+                                    <div class="timestamp" onclick="jumpToTime(9)">0:09</div>
+                                </div>
+                                <div class="transcript-content">
+                                    <div class="speaker-name arif">Speaker 2</div>
+                                    <div class="transcript-text">Hi.</div>
+                                </div>
+                            </div>
+
+                            <div class="transcript-item" data-start="11000" data-end="13000">
+                                <div class="transcript-meta">
+                                    <div class="speaker-indicator aditya"></div>
+                                    <div class="timestamp" onclick="jumpToTime(11)">0:11</div>
+                                </div>
+                                <div class="transcript-content">
+                                    <div class="speaker-name aditya">Speaker 1</div>
+                                    <div class="transcript-text">How are you doing today?</div>
+                                </div>
+                            </div>
+
+                            <div class="transcript-item" data-start="12000" data-end="15000">
+                                <div class="transcript-meta">
+                                    <div class="speaker-indicator arif"></div>
+                                    <div class="timestamp" onclick="jumpToTime(12)">0:12</div>
+                                </div>
+                                <div class="transcript-content">
+                                    <div class="speaker-name arif">Speaker 2</div>
+                                    <div class="transcript-text">I'm fine. Thank you. How are you?</div>
+                                </div>
+                            </div>
+
+                            <div class="transcript-item" data-start="15000" data-end="20000">
+                                <div class="transcript-meta">
+                                    <div class="speaker-indicator aditya"></div>
+                                    <div class="timestamp" onclick="jumpToTime(15)">0:15</div>
+                                </div>
+                                <div class="transcript-content">
+                                    <div class="speaker-name aditya">Speaker 1</div>
+                                    <div class="transcript-text">I'm good. Thank you. Uh, so I believe it's a good time to talk for a minute.</div>
+                                </div>
+                            </div>
+
+                            <div class="transcript-item" data-start="20000" data-end="22000">
+                                <div class="transcript-meta">
+                                    <div class="speaker-indicator arif"></div>
+                                    <div class="timestamp" onclick="jumpToTime(20)">0:20</div>
+                                </div>
+                                <div class="transcript-content">
+                                    <div class="speaker-name arif">Speaker 2</div>
+                                    <div class="transcript-text">I'm fine. Thank you. How are you?</div>
+                                </div>
+                            </div>
+
+                            <div class="transcript-item" data-start="22000" data-end="28000">
+                                <div class="transcript-meta">
+                                    <div class="speaker-indicator aditya"></div>
+                                    <div class="timestamp" onclick="jumpToTime(22)">0:22</div>
+                                </div>
+                                <div class="transcript-content">
+                                    <div class="speaker-name aditya">Speaker 1</div>
+                                    <div class="transcript-text">Great! I wanted to introduce you to LambdaTest, our cross-browser testing platform.</div>
+                                </div>
+                            </div>
+
+                            <div class="transcript-item" data-start="28000" data-end="35000">
+                                <div class="transcript-meta">
+                                    <div class="speaker-indicator arif"></div>
+                                    <div class="timestamp" onclick="jumpToTime(28)">0:28</div>
+                                </div>
+                                <div class="transcript-content">
+                                    <div class="speaker-name arif">Speaker 2</div>
+                                    <div class="transcript-text">Interesting. We're currently using Browserstack, but we've been having some issues with it lately.</div>
+                                </div>
+                            </div>
+
+                            <div class="transcript-item" data-start="35000" data-end="42000">
+                                <div class="transcript-meta">
+                                    <div class="speaker-indicator aditya"></div>
+                                    <div class="timestamp" onclick="jumpToTime(35)">0:35</div>
+                                </div>
+                                <div class="transcript-content">
+                                    <div class="speaker-name aditya">Speaker 1</div>
+                                    <div class="transcript-text">That's exactly why I'm reaching out. Many teams switch to us for better reliability and performance.</div>
+                                </div>
+                            </div>
+
+                            <div class="transcript-item" data-start="42000" data-end="48000">
+                                <div class="transcript-meta">
+                                    <div class="speaker-indicator arif"></div>
+                                    <div class="timestamp" onclick="jumpToTime(42)">0:42</div>
+                                </div>
+                                <div class="transcript-content">
+                                    <div class="speaker-name arif">Speaker 2</div>
+                                    <div class="transcript-text">Could you tell me more about your pricing? And would it be possible to schedule a demo?</div>
+                                </div>
+                            </div>
+
+                            <div class="transcript-item" data-start="48000" data-end="55000">
+                                <div class="transcript-meta">
+                                    <div class="speaker-indicator aditya"></div>
+                                    <div class="timestamp" onclick="jumpToTime(48)">0:48</div>
+                                </div>
+                                <div class="transcript-content">
+                                    <div class="speaker-name aditya">Speaker 1</div>
+                                    <div class="transcript-text">Absolutely! Our pricing is very competitive. I'd be happy to show you a demo. When would work best for your team?</div>
+                                </div>
+                            </div>
+
+                            <div class="transcript-item" data-start="55000" data-end="62000">
+                                <div class="transcript-meta">
+                                    <div class="speaker-indicator arif"></div>
+                                    <div class="timestamp" onclick="jumpToTime(55)">0:55</div>
+                                </div>
+                                <div class="transcript-content">
+                                    <div class="speaker-name arif">Speaker 2</div>
+                                    <div class="transcript-text">Tuesday would work well for us. Could you send over a calendar invite and some documentation?</div>
+                                </div>
+                            </div>
+
+                            <div class="transcript-item" data-start="62000" data-end="68000">
+                                <div class="transcript-meta">
+                                    <div class="speaker-indicator aditya"></div>
+                                    <div class="timestamp" onclick="jumpToTime(62)">1:02</div>
+                                </div>
+                                <div class="transcript-content">
+                                    <div class="speaker-name aditya">Speaker 1</div>
+                                    <div class="transcript-text">Perfect! I'll send you the calendar invite and a one-pager about LambdaTest right after this call.</div>
+                                </div>
+                            </div>
+                            {% endif %}
+                        </div>
+
+                        <!-- Audio Controls -->
+                        <div class="audio-controls">
+                            <div class="time-display">
+                                <span class="current-time">0:00</span>
+                                <span>/</span>
+                                <span class="total-time">0:00</span>
+                            </div>
+                            <div class="playback-controls">
+                                <div class="control-buttons">
+                                    <button class="control-btn" id="skipBackBtn">
+                                        <i class="fas fa-step-backward"></i>
+                                    </button>
+                                    <button class="control-btn play-pause" id="playBtn">
+                                        <i class="fas fa-play"></i>
+                                    </button>
+                                    <button class="control-btn" id="skipForwardBtn">
+                                        <i class="fas fa-step-forward"></i>
+                                    </button>
+                                </div>
+                                <div class="speed-control">
+                                    <div class="speed-dropdown">
+                                        <div class="speed-value" id="speedValue">1x</div>
+                                        <div class="speed-options" id="speedOptions">
+                                            <div class="speed-option" data-speed="0.5">0.5x</div>
+                                            <div class="speed-option active" data-speed="1">1x</div>
+                                            <div class="speed-option" data-speed="1.25">1.25x</div>
+                                            <div class="speed-option" data-speed="1.5">1.5x</div>
+                                            <div class="speed-option" data-speed="2">2x</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="volume-control">
+                                    <i class="fas fa-volume-up" id="volumeIcon"></i>
+                                    <div class="volume-slider" id="volumeSlider">
+                                        <div class="volume-level" id="volumeLevel"></div>
+                                        <div class="volume-handle" id="volumeHandle"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Audio Timeline -->
+                        <div class="audio-timeline">
+                            <div class="timeline-speaker">
+                                <div class="timeline-header">
+                                    <div class="speaker-info aditya">
+                                        <i class="fas fa-phone"></i>
+                                        <span>Speaker 1</span>
+                                    </div>
+                                    <div class="talk-time">Talk time: 66% (1m 3s)</div>
+                                </div>
+                                <div class="timeline-container" id="adityaTimeline">
+                                    <div class="timeline-bars">
+                                        {% set heights = [8, 16, 24, 12, 20, 28, 16, 32, 24, 12, 36, 20, 28, 16, 24, 32, 12, 20, 28, 16, 24, 12, 32, 20, 28, 16, 24, 12, 20, 16, 24, 8, 16, 12, 20, 24, 16, 28, 20, 12] %}
+                                        {% for height in heights %}
+                                        <div class="timeline-bar aditya" style="height: {{ height }}px;"></div>
+                                        {% endfor %}
+                                    </div>
+                                    <div class="playhead" id="adityaPlayhead"></div>
+                                    <div class="timeline-progress" id="adityaProgress"></div>
+                                </div>
+                            </div>
+
+                            <div class="timeline-speaker">
+                                <div class="timeline-header">
+                                    <div class="speaker-info arif">
+                                        <i class="fas fa-user"></i>
+                                        <span>Speaker 2</span>
+                                    </div>
+                                    <div class="talk-time">Talk time: 34% (45s)</div>
+                                </div>
+                                <div class="timeline-container" id="arifTimeline">
+                                    <div class="timeline-bars">
+                                        {% set heights2 = [12, 8, 16, 24, 12, 20, 8, 16, 12, 24, 8, 16, 20, 12, 8, 16, 24, 12, 20, 8, 16, 12, 8, 20, 16, 12, 8, 16, 12, 8] %}
+                                        {% for height in heights2 %}
+                                        <div class="timeline-bar arif" style="height: {{ height }}px;"></div>
+                                        {% endfor %}
+                                    </div>
+                                    <div class="playhead" id="arifPlayhead"></div>
+                                    <div class="timeline-progress" id="arifProgress"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sentiment Tab -->
+                    <div class="tab-content" id="sentimentTab">
+                        <div class="sentiment-analysis-modern">
+                            <!-- Overall Sentiment -->
+                            <div class="sentiment-overview">
+                                <div class="sentiment-label">Overall sentiment</div>
+                                <div class="sentiment-badge" id="overallSentimentBadge">
+                                    {% if sentiment %}
+                                    <span class="sentiment-pill {{ sentiment.lower() }}">{{ sentiment }}</span>
+                                    {% else %}
+                                    <span class="sentiment-pill positive">Positive</span>
+                                    {% endif %}
+                                </div>
+                            </div>
+
+                            <!-- Positive Highlights -->
+                            <div class="highlights-section">
+                                <div class="highlights-header">
+                                    <span class="highlights-title">Positive highlights</span>
+                                    <span class="highlights-count" id="positiveCount">
+                                        {% if positive_highlights %}{{ positive_highlights|length }}{% else %}2{% endif %}
+                                    </span>
+                                </div>
+                                
+                                <div class="highlights-list" id="positiveHighlights">
+                                    {% if positive_highlights and positive_highlights|length > 0 %}
+                                    {% for highlight in positive_highlights %}
+                                    <div class="highlight-item positive">
+                                        <div class="speaker-name">{{ highlight.speaker }}</div>
+                                        <div class="highlight-text">
+                                            {{ highlight.text|replace(highlight.highlight, '<span class="highlight positive">' + highlight.highlight + '</span>')|safe }}
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                    {% else %}
+                                    <!-- Demo positive highlights -->
+                                    <div class="highlight-item positive">
+                                        <div class="speaker-name">Aditya Raj</div>
+                                        <div class="highlight-text">
+                                            "... to talk for a minute. Yeah. <span class="highlight positive">Well, thank you for that.</span> Arif. So you recently make a s..."
+                                        </div>
+                                    </div>
+                                    <div class="highlight-item positive">
+                                        <div class="speaker-name">Arif Celepli</div>
+                                        <div class="highlight-text">
+                                            "... we can do that. <span class="highlight positive">I'd be happy to take a demo next week.</span> My team in India works on..."
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+
+                            <!-- Negative Highlights -->
+                            <div class="highlights-section">
+                                <div class="highlights-header">
+                                    <span class="highlights-title">Negative highlights</span>
+                                    <span class="highlights-count" id="negativeCount">
+                                        {% if negative_highlights %}{{ negative_highlights|length }}{% else %}1{% endif %}
+                                    </span>
+                                </div>
+                                
+                                <div class="highlights-list" id="negativeHighlights">
+                                    {% if negative_highlights and negative_highlights|length > 0 %}
+                                    {% for highlight in negative_highlights %}
+                                    <div class="highlight-item negative">
+                                        <div class="speaker-name">{{ highlight.speaker }}</div>
+                                        <div class="highlight-text">
+                                            {{ highlight.text|replace(highlight.highlight, '<span class="highlight negative">' + highlight.highlight + '</span>')|safe }}
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+                                    {% else %}
+                                    <!-- Demo negative highlight -->
+                                    <div class="highlight-item negative">
+                                        <div class="speaker-name">Arif Celepli</div>
+                                        <div class="highlight-text">
+                                            "... so yeah. <span class="highlight negative">My experience has not been good with them.</span> That's the reason we are..."
+                                        </div>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Sidebar -->
+                <div class="right-sidebar" id="rightSidebar">
+                    <div class="sidebar-section">
+                        <h3>Summary</h3>
+                        <p class="summary-text" id="summaryText">
+                            {% if dynamic_summary %}
+                            {{ dynamic_summary }}
+                            {% elif sentiment %}
+                            Call analysis completed for {{ audio_file }}. The conversation shows {{ sentiment.lower() }} sentiment with {{ "high" if customer_interest else "low" }} customer interest detected.
+                            {% else %}
+                            Speaker 1 introduces LambdaTest as a cross browser testing platform to Speaker 2. Speaker 2 mentions their team already utilises Browserstack and describes they are facing issues with the platform and are interested in exploring alternative solutions. They asked for a demo and request pricing. Speaker 1 gave overview of pricing and asked for good times to schedule the demo call.
+                            {% endif %}
+                        </p>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3>Next action items</h3>
+                        <p class="action-items-text" id="actionItemsText">
+                            {% if dynamic_action_items %}
+                            {{ dynamic_action_items|safe }}
+                            {% elif customer_interest %}
+                            Follow up with customer to schedule a demo or provide additional information based on their expressed interest.
+                            {% else %}
+                            Demo is scheduled with Speaker 2's team on Tuesday. Speaker 1 to share the calendar invite and also a one-pager about LambdaTest.
+                            {% endif %}
+                        </p>
+                    </div>
+
+                    <div class="sidebar-section" id="topicsSection">
+                        <h3>Topics</h3>
+                        <div class="topics-grid" id="topicsGrid">
+                            {% if dynamic_topics and dynamic_topics|length > 0 %}
+                            {% for topic in dynamic_topics %}
+                            <div class="topic-tag">{{ topic }}</div>
+                            {% endfor %}
+                            {% else %}
+                            <div class="topic-tag">Intros (2)</div>
+                            <div class="topic-tag">Schedule meeting (1)</div>
+                            <div class="topic-tag">Longest monologue (1)</div>
+                            <div class="topic-tag">Demo (2)</div>
+                            <div class="topic-tag">Pain point (4)</div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <div class="flash-messages" id="flashMessagesContainer">
+        {% for category, message in messages %}
+        <div class="flash-message {{ category }}">
+            <span>{{ message }}</span>
+            <button onclick="this.parentElement.remove()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
+
+    <!-- Load Chart.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        // Tab switching
+        function switchTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach((tab) => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-button').forEach((button) => {
+                button.classList.remove('active');
+            });
+
+            document.getElementById(tabName + 'Tab').classList.add('active');
+            event.target.classList.add('active');
+        }
+        // Audio playback functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            // Audio elements
+            const audioPlayer = document.getElementById('audioPlayer');
+            if (!audioPlayer) return; // Exit if audio player not found (upload page)
+
+            const playBtn = document.getElementById('playBtn');
+            const skipBackBtn = document.getElementById('skipBackBtn');
+            const skipForwardBtn = document.getElementById('skipForwardBtn');
+            const currentTimeEl = document.querySelector('.current-time');
+            const totalTimeEl = document.querySelector('.total-time');
+            const adityaPlayhead = document.getElementById('adityaPlayhead');
+            const arifPlayhead = document.getElementById('arifPlayhead');
+            const adityaProgress = document.getElementById('adityaProgress');
+            const arifProgress = document.getElementById('arifProgress');
+            const speedValue = document.getElementById('speedValue');
+            const speedOptions = document.getElementById('speedOptions');
+            const volumeIcon = document.getElementById('volumeIcon');
+            const volumeSlider = document.getElementById('volumeSlider');
+            const volumeLevel = document.getElementById('volumeLevel');
+            const volumeHandle = document.getElementById('volumeHandle');
+            const transcriptItems = document.querySelectorAll('.transcript-item');
+            const adityaTimeline = document.getElementById('adityaTimeline');
+            const arifTimeline = document.getElementById('arifTimeline');
+
+            let isPlaying = false;
+            let currentSpeed = 1;
+            let volume = 0.8;
+
+            // Initialize audio
+            audioPlayer.volume = volume;
+
+            // Format time helper function
+            const formatTime = (seconds) => {
+                const minutes = Math.floor(seconds / 60);
+                const secs = Math.floor(seconds % 60);
+                return `${minutes}:${secs.toString().padStart(2, '0')}`;
+            };
+
+            // Update UI when audio metadata is loaded
+            audioPlayer.addEventListener('loadedmetadata', () => {
+                totalTimeEl.textContent = formatTime(audioPlayer.duration);
+            });
+
+            // Handle play/pause button
+            playBtn.addEventListener('click', () => {
+                if (audioPlayer.paused) {
+                    audioPlayer.play();
+                } else {
+                    audioPlayer.pause();
+                }
+            });
+
+            // Update UI when play state changes
+            audioPlayer.addEventListener('play', () => {
+                const icon = playBtn.querySelector('i');
+                icon.classList.remove('fa-play');
+                icon.classList.add('fa-pause');
+                isPlaying = true;
+            });
+
+            audioPlayer.addEventListener('pause', () => {
+                const icon = playBtn.querySelector('i');
+                icon.classList.remove('fa-pause');
+                icon.classList.add('fa-play');
+                isPlaying = false;
+            });
+
+            // Skip backward 10 seconds
+            skipBackBtn.addEventListener('click', () => {
+                audioPlayer.currentTime = Math.max(0, audioPlayer.currentTime - 10);
+            });
+
+            // Skip forward 10 seconds
+            skipForwardBtn.addEventListener('click', () => {
+                audioPlayer.currentTime = Math.min(audioPlayer.duration, audioPlayer.currentTime + 10);
+            });
+
+            // Update time display and playhead position
+            audioPlayer.addEventListener('timeupdate', () => {
+                // Update current time display
+                currentTimeEl.textContent = formatTime(audioPlayer.currentTime);
+
+                if (audioPlayer.duration) {
+                    // Calculate progress percentage
+                    const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+
+                    // Update playheads
+                    adityaPlayhead.style.left = `${progress}%`;
+                    arifPlayhead.style.left = `${progress}%`;
+
+                    // Update progress bars
+                    adityaProgress.style.width = `${progress}%`;
+                    arifProgress.style.width = `${progress}%`;
+
+                    // Highlight current transcript segment
+                    highlightCurrentTranscriptSegment(audioPlayer.currentTime * 1000);
+                }
+            });
+
+            // Speed control functionality
+            speedValue.addEventListener('click', () => {
+                speedOptions.classList.toggle('show');
+            });
+
+            // Handle clicking outside speed options to close dropdown
+            document.addEventListener('click', (e) => {
+                if (!speedValue.contains(e.target)) {
+                    speedOptions.classList.remove('show');
+                }
+            });
+
+            // Set playback speed
+            document.querySelectorAll('.speed-option').forEach((option) => {
+                option.addEventListener('click', () => {
+                    const speed = parseFloat(option.dataset.speed);
+                    audioPlayer.playbackRate = speed;
+                    currentSpeed = speed;
+                    speedValue.textContent = `${speed}x`;
+
+                    // Update active class
+                    document.querySelectorAll('.speed-option').forEach((opt) => {
+                        opt.classList.remove('active');
+                    });
+                    option.classList.add('active');
+
+                    // Hide dropdown
+                    speedOptions.classList.remove('show');
+                });
+            });
+
+            // Volume control functionality
+            volumeIcon.addEventListener('click', () => {
+                if (audioPlayer.volume > 0) {
+                    audioPlayer.volume = 0;
+                    volumeIcon.className = 'fas fa-volume-mute';
+                    updateVolumeUI(0);
+                } else {
+                    audioPlayer.volume = volume;
+                    updateVolumeIcon(volume);
+                    updateVolumeUI(volume);
+                }
+            });
+
+            // Update volume icon based on level
+            function updateVolumeIcon(vol) {
+                if (vol === 0) {
+                    volumeIcon.className = 'fas fa-volume-mute';
+                } else if (vol < 0.5) {
+                    volumeIcon.className = 'fas fa-volume-down';
+                } else {
+                    volumeIcon.className = 'fas fa-volume-up';
+                }
+            }
+
+            // Update volume UI
+            function updateVolumeUI(vol) {
+                volumeLevel.style.width = `${vol * 100}%`;
+                volumeHandle.style.left = `${vol * 100}%`;
+            }
+
+            // Volume slider interaction
+            volumeSlider.addEventListener('click', (e) => {
+                const rect = volumeSlider.getBoundingClientRect();
+                const pos = (e.clientX - rect.left) / rect.width;
+                const newVolume = Math.min(Math.max(pos, 0), 1);
+
+                audioPlayer.volume = newVolume;
+                volume = newVolume;
+                updateVolumeUI(newVolume);
+                updateVolumeIcon(newVolume);
+            });
+
+            // Timeline seeking functionality
+            const seekAudio = (e, timeline) => {
+                const rect = timeline.getBoundingClientRect();
+                const pos = (e.clientX - rect.left) / rect.width;
+                const seekTime = Math.min(Math.max(pos, 0), 1) * audioPlayer.duration;
+                audioPlayer.currentTime = seekTime;
+            };
+
+            // Add click event listeners to timelines
+            adityaTimeline.addEventListener('click', (e) => seekAudio(e, adityaTimeline));
+            arifTimeline.addEventListener('click', (e) => seekAudio(e, arifTimeline));
+
+            // Handle audio errors
+            audioPlayer.addEventListener('error', () => {
+                alert('Error loading audio file. Please try again or use a different file.');
+            });
+
+            // Highlight current transcript segment
+            function highlightCurrentTranscriptSegment(currentTimeMs) {
+                let activeSegment = null;
+
+                transcriptItems.forEach((item) => {
+                    // Remove active class first
+                    item.classList.remove('active');
+
+                    // Get start and end times
+                    const start = parseFloat(item.dataset.start);
+                    const end = parseFloat(item.dataset.end);
+
+                    // Check if current time is within this segment
+                    if (currentTimeMs >= start && currentTimeMs <= end) {
+                        activeSegment = item;
+                    }
+                });
+
+                // Add active class to current segment and scroll into view
+                if (activeSegment) {
+                    activeSegment.classList.add('active');
+                }
+            }
+
+            // Jump to specific time in transcript
+            window.jumpToTime = (time) => {
+                audioPlayer.currentTime = time;
+                if (audioPlayer.paused) {
+                    audioPlayer.play();
+                }
+            };
+
+            // Keyboard shortcuts
+            document.addEventListener('keydown', (e) => {
+                // Only respond if we're not in an input field
+                if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+                    // Space to play/pause
+                    if (e.code === 'Space') {
+                        e.preventDefault();
+                        if (audioPlayer.paused) {
+                            audioPlayer.play();
+                        } else {
+                            audioPlayer.pause();
+                        }
+                    }
+
+                    // Left arrow to skip back
+                    if (e.code === 'ArrowLeft') {
+                        audioPlayer.currentTime = Math.max(0, audioPlayer.currentTime - 5);
+                    }
+
+                    // Right arrow to skip forward
+                    if (e.code === 'ArrowRight') {
+                        audioPlayer.currentTime = Math.min(audioPlayer.duration, audioPlayer.currentTime + 5);
+                    }
+                }
+            });
+
+            // Try to load and play a demo file if no file is specified
+            if (!audioPlayer.querySelector('source').src) {
+                // Add a demo file as fallback
+                const demoSource = document.createElement('source');
+                demoSource.src = 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3';
+                demoSource.type = 'audio/mpeg';
+                audioPlayer.appendChild(demoSource);
+                audioPlayer.load();
+            }
+
+            // Delete button functionality - redirect to upload option
+            const deleteBtn = document.getElementById('deleteBtn');
+            if (deleteBtn) {
+                deleteBtn.addEventListener('click', () => {
+                    if (confirm('Are you sure you want to delete this call log and go back to upload?')) {
+                        // Redirect to homepage or root to show upload form interface
+                        window.location.href = "/";
+                    }
+                });
+            }
+
+            // Remove the old sentiment analytics functions and chart creation code
+            // Keep only the basic tab switching and other functionality
+
+        });
+
+        // File upload handling
+        const fileInput = document.getElementById('audioFile');
+        if (fileInput) {
+            fileInput.addEventListener('change', (e) => {
+                const file = e.target.files[0];
+                if (file) {
+                    document.getElementById('uploadForm').submit();
+                }
+            });
+        }
+
+        // Theme toggle functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const themeToggleBtn = document.getElementById('themeToggleBtn');
+            if (themeToggleBtn) {
+                themeToggleBtn.addEventListener('click', () => {
+                    document.body.classList.toggle('dark-theme');
+
+                    // Update icon
+                    const icon = themeToggleBtn.querySelector('i');
+                    if (document.body.classList.contains('dark-theme')) {
+                        icon.classList.remove('fa-moon');
+                        icon.classList.add('fa-sun');
+                        themeToggleBtn.innerHTML = '<i class="fas fa-sun"></i> Switch Theme';
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        icon.classList.remove('fa-sun');
+                        icon.classList.add('fa-moon');
+                        themeToggleBtn.innerHTML = '<i class="fas fa-moon"></i> Switch Theme';
+                        localStorage.setItem('theme', 'light');
+                    }
+                });
+
+                // Check for saved theme preference
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme === 'dark') {
+                    document.body.classList.add('dark-theme');
+                    const icon = themeToggleBtn.querySelector('i');
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                    themeToggleBtn.innerHTML = '<i class="fas fa-sun"></i> Switch Theme';
+                }
+            }
+        });
+
+        // Download PDF Report function
+async function downloadReport() {
+    try {
+        // Show loading state immediately
+        const downloadBtn = event.target.closest('.action-btn');
+        const originalContent = downloadBtn.innerHTML;
+        downloadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+        downloadBtn.disabled = true;
+        
+        // Try to validate session, but don't block if it fails
+        try {
+            const response = await fetch('/validate-session');
+            const validation = await response.json();
+            
+            console.log('Session validation:', validation);
+            
+            // Only block if we have absolutely no data
+            if (validation.status === 'error') {
+                console.warn('Session validation failed, but proceeding anyway');
+            }
+        } catch (validationError) {
+            console.warn('Session validation request failed, but proceeding anyway:', validationError);
+        }
+        
+        // Create form data with current session data
+        const form = document.createElement('form');
+        form.method = 'POST';
+        form.action = '/download-report';
+        form.style.display = 'none';
+        
+        // Add CSRF token if needed
+        const csrfToken = document.querySelector('meta[name="csrf-token"]');
+        if (csrfToken) {
+            const csrfInput = document.createElement('input');
+            csrfInput.type = 'hidden';
+            csrfInput.name = 'csrf_token';
+            csrfInput.value = csrfToken.getAttribute('content');
+            form.appendChild(csrfInput);
+        }
+        
+        document.body.appendChild(form);
+        form.submit();
+        
+        // Reset button after a delay
+        setTimeout(() => {
+            downloadBtn.innerHTML = originalContent;
+            downloadBtn.disabled = false;
+            if (document.body.contains(form)) {
+                document.body.removeChild(form);
+            }
+        }, 3000);
+        
+    } catch (error) {
+        console.error('Error in downloadReport:', error);
+        
+        // Reset button
+        const downloadBtn = event.target.closest('.action-btn');
+        downloadBtn.innerHTML = '<i class="fas fa-download"></i>';
+        downloadBtn.disabled = false;
+        
+        // Still try to download - maybe the server can handle it
+        const form = document.createElement('form');
+        form.method = 'POST';
+        form.action = '/download-report';
+        form.style.display = 'none';
+        document.body.appendChild(form);
+        form.submit();
+        
+        setTimeout(() => {
+            if (document.body.contains(form)) {
+                document.body.removeChild(form);
+            }
+        }, 2000);
+    }
+}
+        
+        // Delete recording and return to upload
+        function deleteRecording() {
+            if (confirm('Are you sure you want to delete this recording and start over?')) {
+                // Show loading state
+                const deleteBtn = event.target.closest('.action-btn');
+                const originalContent = deleteBtn.innerHTML;
+                deleteBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+                deleteBtn.disabled = true;
+                
+                // Redirect to clear session and return to upload
+                window.location.href = '/clear-session';
+            }
+        }
+    </script>
+</body>
+</html>

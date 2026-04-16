@@ -1,0 +1,566 @@
+"use client"
+
+import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+import {
+  ArrowLeft,
+  Phone,
+  Share2,
+  Download,
+  Trash2,
+  Play,
+  SkipBack,
+  SkipForward,
+  ChevronLeft,
+  ChevronRight,
+  BarChart3,
+  PhoneCall,
+  Settings,
+  User,
+  Moon,
+  Puzzle,
+} from "lucide-react"
+import { useState } from "react"
+
+export default function Component() {
+  const [activeTab, setActiveTab] = useState("overview")
+  return (
+    <div className="flex h-screen bg-gray-50">
+      {/* Left Sidebar */}
+      <div className="w-64 bg-white border-r border-gray-200 flex flex-col">
+        {/* Logo */}
+        <div className="p-4 border-b border-gray-200">
+          <div className="flex items-center gap-2">
+            <div className="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center">
+              <div className="w-4 h-4 bg-white rounded-full"></div>
+            </div>
+            <span className="font-semibold text-gray-900">PrimeRole</span>
+          </div>
+        </div>
+
+        {/* Workspace Selector */}
+        <div className="p-4 border-b border-gray-200">
+          <div className="flex items-center gap-2">
+            <div className="w-6 h-6 bg-orange-500 rounded flex items-center justify-center">
+              <div className="w-3 h-3 bg-white rounded"></div>
+            </div>
+            <span className="text-sm text-gray-700">Test Workspace</span>
+            <svg className="w-4 h-4 text-gray-400 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+        </div>
+
+        {/* Navigation */}
+        <div className="flex-1 p-4">
+          <Button variant="ghost" className="w-full justify-start mb-2 text-left">
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back
+          </Button>
+
+          <div className="space-y-1 mt-4">
+            <Button variant="ghost" className="w-full justify-start bg-purple-50 text-purple-700">
+              <PhoneCall className="w-4 h-4 mr-2" />
+              Calls logs
+            </Button>
+            <Button variant="ghost" className="w-full justify-start text-gray-600">
+              <BarChart3 className="w-4 h-4 mr-2" />
+              Analytics
+            </Button>
+          </div>
+        </div>
+
+        {/* Bottom Actions */}
+        <div className="p-4 border-t border-gray-200 space-y-2">
+          <Button variant="default" className="w-full bg-purple-600 hover:bg-purple-700">
+            <Puzzle className="w-4 h-4 mr-2" />
+            Install Browser Extension
+          </Button>
+          <Button variant="ghost" className="w-full justify-start text-gray-600">
+            <Moon className="w-4 h-4 mr-2" />
+            Switch Theme
+          </Button>
+          <Button variant="ghost" className="w-full justify-start text-gray-600">
+            <Settings className="w-4 h-4 mr-2" />
+            Profile Settings
+          </Button>
+        </div>
+
+        {/* User Info */}
+        <div className="p-4 border-t border-gray-200">
+          <div className="flex items-center gap-2">
+            <User className="w-4 h-4 text-gray-400" />
+            <div className="text-xs text-gray-500">
+              <div>Test user</div>
+              <div>test[...]@primerole.com</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <div className="flex-1 flex flex-col">
+        {/* Header */}
+        <div className="bg-white border-b border-gray-200 p-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              <span className="text-sm text-gray-500">Call logs</span>
+              <span className="text-sm text-purple-600">Outgoing call with +44 (156) 781234</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Call Header */}
+        <div className="bg-white border-b border-gray-200 p-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                <Phone className="w-5 h-5 text-green-600" />
+              </div>
+              <div>
+                <h2 className="text-lg font-semibold text-gray-900">Michael Johnson</h2>
+                <div className="flex items-center gap-1 text-sm text-gray-500">
+                  <img src="/placeholder.svg?height=16&width=16" alt="UK Flag" className="w-4 h-4" />
+                  +44 (156) 781234
+                </div>
+              </div>
+            </div>
+            <div className="flex items-center gap-2">
+              <Button variant="outline" size="sm">
+                <Share2 className="w-4 h-4" />
+              </Button>
+              <Button variant="outline" size="sm">
+                <Download className="w-4 h-4" />
+              </Button>
+              <Button variant="outline" size="sm">
+                <Trash2 className="w-4 h-4" />
+              </Button>
+            </div>
+          </div>
+        </div>
+
+        {/* Content Area */}
+        <div className="flex-1 flex">
+          {/* Transcript */}
+          <div className="flex-1 p-6">
+            <div className="flex gap-4 mb-6">
+              <Button
+                variant={activeTab === "overview" ? "default" : "ghost"}
+                className={activeTab === "overview" ? "bg-purple-600 hover:bg-purple-700" : "text-gray-500"}
+                onClick={() => setActiveTab("overview")}
+              >
+                Overview
+              </Button>
+              <Button
+                variant={activeTab === "sentiment" ? "default" : "ghost"}
+                className={activeTab === "sentiment" ? "bg-purple-600 hover:bg-purple-700" : "text-gray-500"}
+                onClick={() => setActiveTab("sentiment")}
+              >
+                Sentiment
+              </Button>
+            </div>
+
+            <div className="bg-white rounded-lg border border-gray-200 p-6">
+              {activeTab === "overview" && (
+                <>
+                  <h3 className="text-lg font-semibold mb-4">Transcript</h3>
+
+                  <div className="space-y-4">
+                    <div className="flex gap-3">
+                      <div className="flex flex-col items-center">
+                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                        <div className="text-xs text-gray-500 mt-1">0:04</div>
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-1">
+                          <div className="font-medium text-purple-600">Aditya Raj</div>
+                          <div className="w-2 h-2 bg-green-400 rounded-full" title="Positive sentiment"></div>
+                        </div>
+                        <div className="text-gray-700">
+                          Hello. Hey. Hi, Eric. This is Anadja. I'm calling you from JustCall.
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex gap-3">
+                      <div className="flex flex-col items-center">
+                        <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                        <div className="text-xs text-gray-500 mt-1">0:09</div>
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-1">
+                          <div className="font-medium text-purple-600">Arif Celepli</div>
+                          <div className="w-2 h-2 bg-yellow-400 rounded-full" title="Neutral sentiment"></div>
+                        </div>
+                        <div className="text-gray-700">Hi.</div>
+                      </div>
+                    </div>
+
+                    <div className="flex gap-3">
+                      <div className="flex flex-col items-center">
+                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                        <div className="text-xs text-gray-500 mt-1">0:11</div>
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-1">
+                          <div className="font-medium text-purple-600">Aditya Raj</div>
+                          <div className="w-2 h-2 bg-green-400 rounded-full" title="Positive sentiment"></div>
+                        </div>
+                        <div className="text-gray-700">How are you doing today?</div>
+                      </div>
+                    </div>
+
+                    <div className="flex gap-3">
+                      <div className="flex flex-col items-center">
+                        <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                        <div className="text-xs text-gray-500 mt-1">0:12</div>
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-1">
+                          <div className="font-medium text-purple-600">Arif Celepli</div>
+                          <div className="w-2 h-2 bg-green-400 rounded-full" title="Positive sentiment"></div>
+                        </div>
+                        <div className="text-gray-700">I'm fine. Thank you. How are you?</div>
+                      </div>
+                    </div>
+
+                    <div className="flex gap-3">
+                      <div className="flex flex-col items-center">
+                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                        <div className="text-xs text-gray-500 mt-1">0:11</div>
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-1">
+                          <div className="font-medium text-purple-600">Aditya Raj</div>
+                          <div className="w-2 h-2 bg-green-400 rounded-full" title="Positive sentiment"></div>
+                        </div>
+                        <div className="text-gray-700">
+                          I'm good. Thank you. Uh, so I believe it's a good time to talk for a minute.
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex gap-3">
+                      <div className="flex flex-col items-center">
+                        <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+                        <div className="text-xs text-gray-500 mt-1">0:12</div>
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-1">
+                          <div className="font-medium text-purple-600">Arif Celepli</div>
+                          <div className="w-2 h-2 bg-red-400 rounded-full" title="Negative sentiment"></div>
+                        </div>
+                        <div className="text-gray-700">I'm fine. Thank you. How are you?</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between mt-6 pt-4 border-t border-gray-200">
+                    <div className="text-sm text-gray-500">Oct 16, 2024, 8:12 AM</div>
+                    <div className="flex items-center gap-2">
+                      <Button variant="ghost" size="sm">
+                        <SkipBack className="w-4 h-4" />
+                      </Button>
+                      <Button variant="ghost" size="sm">
+                        <Play className="w-4 h-4" />
+                      </Button>
+                      <Button variant="ghost" size="sm">
+                        <SkipForward className="w-4 h-4" />
+                      </Button>
+                      <div className="flex items-center gap-2 ml-4">
+                        <Button variant="ghost" size="sm">
+                          <ChevronLeft className="w-4 h-4" />
+                        </Button>
+                        <span className="text-sm">1x</span>
+                        <Button variant="ghost" size="sm">
+                          <ChevronRight className="w-4 h-4" />
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              )}
+
+              {activeTab === "sentiment" && (
+                <>
+                  <h3 className="text-lg font-semibold mb-6">Sentiment Analysis</h3>
+
+                  {/* Overall Sentiment Score */}
+                  <div className="grid grid-cols-3 gap-4 mb-6">
+                    <div className="bg-green-50 border border-green-200 rounded-lg p-4 text-center">
+                      <div className="text-2xl font-bold text-green-600">7.2</div>
+                      <div className="text-sm text-green-700">Overall Score</div>
+                      <div className="text-xs text-gray-500 mt-1">Positive</div>
+                    </div>
+                    <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center">
+                      <div className="text-2xl font-bold text-blue-600">8.1</div>
+                      <div className="text-sm text-blue-700">Customer Satisfaction</div>
+                      <div className="text-xs text-gray-500 mt-1">High</div>
+                    </div>
+                    <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 text-center">
+                      <div className="text-2xl font-bold text-purple-600">6.8</div>
+                      <div className="text-sm text-purple-700">Agent Performance</div>
+                      <div className="text-xs text-gray-500 mt-1">Good</div>
+                    </div>
+                  </div>
+
+                  {/* Sentiment Timeline */}
+                  <div className="mb-6">
+                    <h4 className="font-medium text-gray-900 mb-3">Sentiment Over Time</h4>
+                    <div className="h-32 bg-gray-50 rounded-lg p-4 relative">
+                      <div className="absolute inset-4">
+                        <svg className="w-full h-full" viewBox="0 0 400 80">
+                          <defs>
+                            <linearGradient id="sentimentGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                              <stop offset="0%" stopColor="#10b981" stopOpacity="0.3" />
+                              <stop offset="100%" stopColor="#10b981" stopOpacity="0.1" />
+                            </linearGradient>
+                          </defs>
+                          <path
+                            d="M 0 60 Q 50 45 100 50 T 200 40 T 300 35 T 400 30"
+                            stroke="#10b981"
+                            strokeWidth="2"
+                            fill="none"
+                          />
+                          <path
+                            d="M 0 60 Q 50 45 100 50 T 200 40 T 300 35 T 400 30 L 400 80 L 0 80 Z"
+                            fill="url(#sentimentGradient)"
+                          />
+                          {/* Data points */}
+                          <circle cx="0" cy="60" r="3" fill="#10b981" />
+                          <circle cx="100" cy="50" r="3" fill="#10b981" />
+                          <circle cx="200" cy="40" r="3" fill="#10b981" />
+                          <circle cx="300" cy="35" r="3" fill="#10b981" />
+                          <circle cx="400" cy="30" r="3" fill="#10b981" />
+                        </svg>
+                      </div>
+                      <div className="absolute bottom-2 left-4 text-xs text-gray-500">0:00</div>
+                      <div className="absolute bottom-2 right-4 text-xs text-gray-500">1:48</div>
+                    </div>
+                  </div>
+
+                  {/* Speaker Sentiment Breakdown */}
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div className="border border-gray-200 rounded-lg p-4">
+                      <div className="flex items-center gap-2 mb-3">
+                        <Phone className="w-4 h-4 text-purple-600" />
+                        <span className="font-medium text-purple-600">Aditya Raj</span>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex justify-between text-sm">
+                          <span className="text-green-600">Positive</span>
+                          <span className="font-medium">75%</span>
+                        </div>
+                        <div className="w-full bg-gray-200 rounded-full h-2">
+                          <div className="bg-green-500 h-2 rounded-full" style={{ width: "75%" }}></div>
+                        </div>
+                        <div className="flex justify-between text-sm">
+                          <span className="text-yellow-600">Neutral</span>
+                          <span className="font-medium">20%</span>
+                        </div>
+                        <div className="w-full bg-gray-200 rounded-full h-2">
+                          <div className="bg-yellow-500 h-2 rounded-full" style={{ width: "20%" }}></div>
+                        </div>
+                        <div className="flex justify-between text-sm">
+                          <span className="text-red-600">Negative</span>
+                          <span className="font-medium">5%</span>
+                        </div>
+                        <div className="w-full bg-gray-200 rounded-full h-2">
+                          <div className="bg-red-500 h-2 rounded-full" style={{ width: "5%" }}></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="border border-gray-200 rounded-lg p-4">
+                      <div className="flex items-center gap-2 mb-3">
+                        <User className="w-4 h-4 text-purple-600" />
+                        <span className="font-medium text-purple-600">Arif Celepli</span>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex justify-between text-sm">
+                          <span className="text-green-600">Positive</span>
+                          <span className="font-medium">60%</span>
+                        </div>
+                        <div className="w-full bg-gray-200 rounded-full h-2">
+                          <div className="bg-green-500 h-2 rounded-full" style={{ width: "60%" }}></div>
+                        </div>
+                        <div className="flex justify-between text-sm">
+                          <span className="text-yellow-600">Neutral</span>
+                          <span className="font-medium">25%</span>
+                        </div>
+                        <div className="w-full bg-gray-200 rounded-full h-2">
+                          <div className="bg-yellow-500 h-2 rounded-full" style={{ width: "25%" }}></div>
+                        </div>
+                        <div className="flex justify-between text-sm">
+                          <span className="text-red-600">Negative</span>
+                          <span className="font-medium">15%</span>
+                        </div>
+                        <div className="w-full bg-gray-200 rounded-full h-2">
+                          <div className="bg-red-500 h-2 rounded-full" style={{ width: "15%" }}></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Key Sentiment Moments */}
+                  <div>
+                    <h4 className="font-medium text-gray-900 mb-3">Key Sentiment Moments</h4>
+                    <div className="space-y-3">
+                      <div className="flex items-start gap-3 p-3 bg-green-50 border border-green-200 rounded-lg">
+                        <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2 mb-1">
+                            <span className="text-sm font-medium text-green-700">Positive Peak</span>
+                            <span className="text-xs text-gray-500">0:11</span>
+                          </div>
+                          <p className="text-sm text-gray-700">"How are you doing today?" - Friendly opening</p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-3 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                        <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2 mb-1">
+                            <span className="text-sm font-medium text-blue-700">Engagement High</span>
+                            <span className="text-xs text-gray-500">0:12</span>
+                          </div>
+                          <p className="text-sm text-gray-700">
+                            "I'm fine. Thank you. How are you?" - Reciprocal engagement
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-3 p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
+                        <div className="w-2 h-2 bg-yellow-500 rounded-full mt-2"></div>
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2 mb-1">
+                            <span className="text-sm font-medium text-yellow-700">Neutral Response</span>
+                            <span className="text-xs text-gray-500">0:09</span>
+                          </div>
+                          <p className="text-sm text-gray-700">"Hi." - Brief acknowledgment</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              )}
+            </div>
+
+            {/* Audio Visualization */}
+            <div className="mt-6 bg-white rounded-lg border border-gray-200 p-6">
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <Phone className="w-4 h-4 text-purple-600" />
+                    <span className="text-sm font-medium text-purple-600">Aditya Raj</span>
+                  </div>
+                  <span className="text-sm text-gray-500">Talk time: 66% (1m 3s)</span>
+                </div>
+                <div className="h-8 bg-gray-100 rounded relative overflow-hidden">
+                  <div className="absolute inset-0 flex items-center">
+                    {/* Audio waveform bars for Aditya */}
+                    <div className="flex items-end h-full gap-1 px-2">
+                      {[
+                        4, 8, 12, 6, 10, 14, 8, 16, 12, 6, 18, 10, 14, 8, 12, 16, 6, 10, 14, 8, 12, 6, 16, 10, 14, 8,
+                        12, 6,
+                      ].map((height, i) => (
+                        <div
+                          key={i}
+                          className="bg-purple-500 rounded-sm"
+                          style={{ height: `${height}px`, width: "3px" }}
+                        ></div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <User className="w-4 h-4 text-purple-600" />
+                    <span className="text-sm font-medium text-purple-600">Arif Celepli</span>
+                  </div>
+                  <span className="text-sm text-gray-500">Talk time: 34% (45s)</span>
+                </div>
+                <div className="h-8 bg-gray-100 rounded relative overflow-hidden">
+                  <div className="absolute inset-0 flex items-center">
+                    {/* Audio waveform bars for Arif */}
+                    <div className="flex items-end h-full gap-1 px-2">
+                      {[6, 4, 8, 12, 6, 10, 4, 8, 6, 12, 4, 8, 10, 6, 4, 8, 12, 6, 10, 4].map((height, i) => (
+                        <div
+                          key={i}
+                          className="bg-purple-500 rounded-sm"
+                          style={{ height: `${height}px`, width: "3px" }}
+                        ></div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Sidebar */}
+          <div className="w-80 bg-white border-l border-gray-200 p-6">
+            <div className="space-y-6">
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-3">Summary</h3>
+                <div className="space-y-3 mb-4">
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-gray-600">Overall Sentiment</span>
+                    <div className="flex items-center gap-1">
+                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                      <span className="font-medium text-green-600">Positive</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-gray-600">Customer Satisfaction</span>
+                    <span className="font-medium text-blue-600">8.1/10</span>
+                  </div>
+                  <div className="flex items-center justify-between text-sm">
+                    <span className="text-gray-600">Engagement Level</span>
+                    <span className="font-medium text-purple-600">High</span>
+                  </div>
+                </div>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Adiya introduces LambdaTest as a cross browser testing platform to Arif. Arif mentions their team
+                  already utilises Browserstack and describes they are facing issues with the platform and are
+                  interested in exploring alternative solutions. He introduced his team members, asked for a demo and
+                  request pricing. Adiya gave overview of pricing and asked for good times to schedule the demo call.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-3">Next action items</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Demo is scheduled with Arif's team on Tuesday. Aditya to share to share the calendar invite and also a
+                  one-pager about LambdaTest.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-3">Topics</h3>
+                <div className="flex flex-wrap gap-2">
+                  <Badge variant="secondary" className="text-xs">
+                    Intros (2)
+                  </Badge>
+                  <Badge variant="secondary" className="text-xs">
+                    Schedule meeting (1)
+                  </Badge>
+                  <Badge variant="secondary" className="text-xs">
+                    Longest monologue (1)
+                  </Badge>
+                  <Badge variant="secondary" className="text-xs">
+                    Demo (2)
+                  </Badge>
+                  <Badge variant="secondary" className="text-xs">
+                    Pain point (4)
+                  </Badge>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}

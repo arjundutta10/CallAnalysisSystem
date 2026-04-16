@@ -1,0 +1,2930 @@
+{
+  "session_id": "session_1749315185_4d448430",
+  "transcript_segments": [
+    {
+      "speaker": "Speaker 1",
+      "text": "Hello.",
+      "start": 1520,
+      "end": 1840,
+      "confidence": 0.904541
+    },
+    {
+      "speaker": "Speaker 2",
+      "text": "Hello. Hi, can I speak with Tajinder?",
+      "start": 2480,
+      "end": 4720,
+      "confidence": 0.9184152
+    },
+    {
+      "speaker": "Speaker 1",
+      "text": "Yes.",
+      "start": 5440,
+      "end": 5920,
+      "confidence": 0.8171387
+    },
+    {
+      "speaker": "Speaker 2",
+      "text": "Hi Tajinder, good evening, how are you?",
+      "start": 6400,
+      "end": 8560,
+      "confidence": 0.9594099
+    },
+    {
+      "speaker": "Speaker 1",
+      "text": "Good evening. Yes, tell me.",
+      "start": 8960,
+      "end": 10320,
+      "confidence": 0.85307616
+    },
+    {
+      "speaker": "Speaker 2",
+      "text": "I'm calling from Simple AI and the reason I'm calling you, basically I was just going to a LinkedIn profile. You are working as IT operations manager at AG Genabi Group.",
+      "start": 12480,
+      "end": 22960,
+      "confidence": 0.94420993
+    },
+    {
+      "speaker": "Speaker 1",
+      "text": "Yes.",
+      "start": 23920,
+      "end": 24400,
+      "confidence": 0.9958496
+    },
+    {
+      "speaker": "Speaker 2",
+      "text": "So I just wanted to introduce you a platform which is simple AI. What? Simple AI does it basically streamline the operations like credit underwriting, financial spreading, risk monitoring and automating by using AI agents. Wanted to know, are you currently using AI to simplify these kind of processes?",
+      "start": 25200,
+      "end": 42160,
+      "confidence": 0.9718109
+    },
+    {
+      "speaker": "Speaker 1",
+      "text": "Actually we are using Microsoft AI framework in our Dynamics and Business Central actually.",
+      "start": 42800,
+      "end": 50320,
+      "confidence": 0.95227635
+    },
+    {
+      "speaker": "Speaker 2",
+      "text": "Okay.",
+      "start": 50880,
+      "end": 51520,
+      "confidence": 0.9246419
+    },
+    {
+      "speaker": "Speaker 1",
+      "text": "Yeah. So this is the only thing we are using via UI. Okay.",
+      "start": 51840,
+      "end": 56590,
+      "confidence": 0.9401636
+    },
+    {
+      "speaker": "Speaker 2",
+      "text": "So you know we are 40, cost effective and any other tool in the market. So just if you are open for a quick 30 minute, 15 to 30 minutes call speech, like how we can ease your process, how we can simplify your process. So are you open for that for just 15 to 30 minutes where we can show you the demo platform and without any business expectations like nothing.",
+      "start": 56910,
+      "end": 77230,
+      "confidence": 0.97541636
+    },
+    {
+      "speaker": "Speaker 1",
+      "text": "I know, I know. The thing is actually right now I'm on leave like for seven days. Can you schedule on next Monday?",
+      "start": 78270,
+      "end": 87500,
+      "confidence": 0.94629616
+    },
+    {
+      "speaker": "Speaker 2",
+      "text": "Yeah, definitely, that works for me. The next Monday is right?",
+      "start": 88300,
+      "end": 91980,
+      "confidence": 0.9538648
+    },
+    {
+      "speaker": "Speaker 1",
+      "text": "Yeah, yeah.",
+      "start": 92700,
+      "end": 93860,
+      "confidence": 0.93806964
+    },
+    {
+      "speaker": "Speaker 2",
+      "text": "On 12th. What time you are available? Could you please let me know?",
+      "start": 93860,
+      "end": 96700,
+      "confidence": 0.99908596
+    },
+    {
+      "speaker": "Speaker 1",
+      "text": "I will be available around 1:30, 1:30 your time.",
+      "start": 97180,
+      "end": 101260,
+      "confidence": 0.99850714
+    },
+    {
+      "speaker": "Speaker 2",
+      "text": "GST, right?",
+      "start": 101260,
+      "end": 102140,
+      "confidence": 0.99694824
+    },
+    {
+      "speaker": "Speaker 1",
+      "text": "Yes.",
+      "start": 102700,
+      "end": 103180,
+      "confidence": 0.92333984
+    },
+    {
+      "speaker": "Speaker 2",
+      "text": "Okay. Could you please confirm email address? The one I have, is it dionidis@.com? Sorry, is it correct?",
+      "start": 103500,
+      "end": 110440,
+      "confidence": 0.952186
+    },
+    {
+      "speaker": "Speaker 1",
+      "text": "Correct, Correct.",
+      "start": 110440,
+      "end": 111680,
+      "confidence": 0.9897461
+    },
+    {
+      "speaker": "Speaker 2",
+      "text": "Okay, I'll just go ahead and drop you a calendar invite for the same for 12th, Monday 1:30pm Right? Your time.",
+      "start": 111680,
+      "end": 118320,
+      "confidence": 0.9642971
+    },
+    {
+      "speaker": "Speaker 1",
+      "text": "Okay. Okay.",
+      "start": 118400,
+      "end": 119440,
+      "confidence": 0.9210612
+    },
+    {
+      "speaker": "Speaker 2",
+      "text": "And one more thing, Is this your WhatsApp number? Can I share you some details on WhatsApp as well?",
+      "start": 119440,
+      "end": 124560,
+      "confidence": 0.9560076
+    },
+    {
+      "speaker": "Speaker 1",
+      "text": "Yeah.",
+      "start": 124560,
+      "end": 125040,
+      "confidence": 0.9851888
+    },
+    {
+      "speaker": "Speaker 2",
+      "text": "Okay, thank you so much. Thank you for your time. I'll just go ahead and drop you a email as well. Some share some details as well.",
+      "start": 125520,
+      "end": 132040,
+      "confidence": 0.95976806
+    },
+    {
+      "speaker": "Speaker 1",
+      "text": "Okay.",
+      "start": 132040,
+      "end": 132480,
+      "confidence": 0.99886066
+    },
+    {
+      "speaker": "Speaker 2",
+      "text": "And let's connect on 12th. Thank you so much. Thank you. Bye bye.",
+      "start": 132880,
+      "end": 136440,
+      "confidence": 0.95388854
+    },
+    {
+      "speaker": "Speaker 1",
+      "text": "Have a good day. Bye bye.",
+      "start": 136440,
+      "end": 137850,
+      "confidence": 0.98710126
+    }
+  ],
+  "sentiment": "Neutral",
+  "speaker_emotions": {
+    "Speaker 1": [
+      "neutral",
+      "joy",
+      "optimism",
+      "joy",
+      "optimism",
+      "neutral",
+      "joy",
+      "optimism",
+      "joy",
+      "optimism",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "joy",
+      "optimism",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "joy",
+      "optimism",
+      "neutral"
+    ],
+    "Speaker 2": [
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "joy",
+      "optimism",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "joy",
+      "optimism",
+      "joy",
+      "optimism",
+      "neutral",
+      "joy",
+      "optimism",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "neutral",
+      "joy",
+      "optimism",
+      "joy",
+      "optimism",
+      "neutral",
+      "neutral",
+      "neutral",
+      "joy",
+      "optimism",
+      "joy",
+      "optimism",
+      "neutral"
+    ]
+  },
+  "customer_interest": true,
+  "audio_filename": "REf2d296390249d8d6f6e1f844672256b1.mp3",
+  "word_timings": [
+    {
+      "start": 1.52,
+      "end": 1.84,
+      "text": "Hello.",
+      "speaker": "A",
+      "confidence": 0.904541
+    },
+    {
+      "start": 2.48,
+      "end": 3.0,
+      "text": "Hello.",
+      "speaker": "B",
+      "confidence": 0.7558594
+    },
+    {
+      "start": 3.0,
+      "end": 3.32,
+      "text": "Hi,",
+      "speaker": "B",
+      "confidence": 0.9724121
+    },
+    {
+      "start": 3.32,
+      "end": 3.48,
+      "text": "can",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 3.48,
+      "end": 3.64,
+      "text": "I",
+      "speaker": "B",
+      "confidence": 0.9116211
+    },
+    {
+      "start": 3.64,
+      "end": 3.84,
+      "text": "speak",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 3.84,
+      "end": 3.96,
+      "text": "with",
+      "speaker": "B",
+      "confidence": 0.99072266
+    },
+    {
+      "start": 3.96,
+      "end": 4.72,
+      "text": "Tajinder?",
+      "speaker": "B",
+      "confidence": 0.7992676
+    },
+    {
+      "start": 5.44,
+      "end": 5.92,
+      "text": "Yes.",
+      "speaker": "A",
+      "confidence": 0.8171387
+    },
+    {
+      "start": 6.4,
+      "end": 6.8,
+      "text": "Hi",
+      "speaker": "B",
+      "confidence": 0.9926758
+    },
+    {
+      "start": 6.8,
+      "end": 7.44,
+      "text": "Tajinder,",
+      "speaker": "B",
+      "confidence": 0.7270996
+    },
+    {
+      "start": 7.44,
+      "end": 7.6,
+      "text": "good",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 7.6,
+      "end": 7.96,
+      "text": "evening,",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 7.96,
+      "end": 8.2,
+      "text": "how",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 8.2,
+      "end": 8.32,
+      "text": "are",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 8.32,
+      "end": 8.56,
+      "text": "you?",
+      "speaker": "B",
+      "confidence": 0.99658203
+    },
+    {
+      "start": 8.96,
+      "end": 9.24,
+      "text": "Good",
+      "speaker": "A",
+      "confidence": 0.99316406
+    },
+    {
+      "start": 9.24,
+      "end": 9.56,
+      "text": "evening.",
+      "speaker": "A",
+      "confidence": 0.9970703
+    },
+    {
+      "start": 9.56,
+      "end": 9.84,
+      "text": "Yes,",
+      "speaker": "A",
+      "confidence": 0.7404785
+    },
+    {
+      "start": 9.84,
+      "end": 10.04,
+      "text": "tell",
+      "speaker": "A",
+      "confidence": 0.54296875
+    },
+    {
+      "start": 10.04,
+      "end": 10.32,
+      "text": "me.",
+      "speaker": "A",
+      "confidence": 0.9916992
+    },
+    {
+      "start": 12.48,
+      "end": 12.8,
+      "text": "I'm",
+      "speaker": "B",
+      "confidence": 0.99397784
+    },
+    {
+      "start": 12.8,
+      "end": 13.04,
+      "text": "calling",
+      "speaker": "B",
+      "confidence": 0.94628906
+    },
+    {
+      "start": 13.04,
+      "end": 13.32,
+      "text": "from",
+      "speaker": "B",
+      "confidence": 0.99902344
+    },
+    {
+      "start": 13.32,
+      "end": 13.76,
+      "text": "Simple",
+      "speaker": "B",
+      "confidence": 0.9777832
+    },
+    {
+      "start": 13.76,
+      "end": 14.24,
+      "text": "AI",
+      "speaker": "B",
+      "confidence": 0.97387695
+    },
+    {
+      "start": 14.48,
+      "end": 14.8,
+      "text": "and",
+      "speaker": "B",
+      "confidence": 0.99316406
+    },
+    {
+      "start": 14.8,
+      "end": 15.0,
+      "text": "the",
+      "speaker": "B",
+      "confidence": 0.99902344
+    },
+    {
+      "start": 15.0,
+      "end": 15.2,
+      "text": "reason",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 15.2,
+      "end": 15.52,
+      "text": "I'm",
+      "speaker": "B",
+      "confidence": 0.99853516
+    },
+    {
+      "start": 15.52,
+      "end": 15.76,
+      "text": "calling",
+      "speaker": "B",
+      "confidence": 0.8112793
+    },
+    {
+      "start": 15.76,
+      "end": 16.08,
+      "text": "you,",
+      "speaker": "B",
+      "confidence": 0.99902344
+    },
+    {
+      "start": 16.32,
+      "end": 16.8,
+      "text": "basically",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 16.8,
+      "end": 17.0,
+      "text": "I",
+      "speaker": "B",
+      "confidence": 0.99902344
+    },
+    {
+      "start": 17.0,
+      "end": 17.16,
+      "text": "was",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 17.16,
+      "end": 17.32,
+      "text": "just",
+      "speaker": "B",
+      "confidence": 0.9980469
+    },
+    {
+      "start": 17.32,
+      "end": 17.48,
+      "text": "going",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 17.48,
+      "end": 17.64,
+      "text": "to",
+      "speaker": "B",
+      "confidence": 0.97802734
+    },
+    {
+      "start": 17.64,
+      "end": 17.76,
+      "text": "a",
+      "speaker": "B",
+      "confidence": 0.66308594
+    },
+    {
+      "start": 17.76,
+      "end": 18.12,
+      "text": "LinkedIn",
+      "speaker": "B",
+      "confidence": 0.998291
+    },
+    {
+      "start": 18.12,
+      "end": 18.64,
+      "text": "profile.",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 18.96,
+      "end": 19.24,
+      "text": "You",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 19.24,
+      "end": 19.44,
+      "text": "are",
+      "speaker": "B",
+      "confidence": 0.9970703
+    },
+    {
+      "start": 19.44,
+      "end": 19.68,
+      "text": "working",
+      "speaker": "B",
+      "confidence": 0.9980469
+    },
+    {
+      "start": 19.68,
+      "end": 19.96,
+      "text": "as",
+      "speaker": "B",
+      "confidence": 0.6821289
+    },
+    {
+      "start": 19.96,
+      "end": 20.32,
+      "text": "IT",
+      "speaker": "B",
+      "confidence": 0.6635742
+    },
+    {
+      "start": 20.32,
+      "end": 20.92,
+      "text": "operations",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 20.92,
+      "end": 21.52,
+      "text": "manager",
+      "speaker": "B",
+      "confidence": 0.9992676
+    },
+    {
+      "start": 21.52,
+      "end": 21.8,
+      "text": "at",
+      "speaker": "B",
+      "confidence": 0.9970703
+    },
+    {
+      "start": 21.8,
+      "end": 22.12,
+      "text": "AG",
+      "speaker": "B",
+      "confidence": 0.94189453
+    },
+    {
+      "start": 22.12,
+      "end": 22.72,
+      "text": "Genabi",
+      "speaker": "B",
+      "confidence": 0.66593426
+    },
+    {
+      "start": 22.72,
+      "end": 22.96,
+      "text": "Group.",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 23.92,
+      "end": 24.4,
+      "text": "Yes.",
+      "speaker": "A",
+      "confidence": 0.9958496
+    },
+    {
+      "start": 25.2,
+      "end": 25.44,
+      "text": "So",
+      "speaker": "B",
+      "confidence": 0.99072266
+    },
+    {
+      "start": 25.44,
+      "end": 25.56,
+      "text": "I",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 25.56,
+      "end": 25.76,
+      "text": "just",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 25.76,
+      "end": 26.08,
+      "text": "wanted",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 26.08,
+      "end": 26.2,
+      "text": "to",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 26.2,
+      "end": 26.64,
+      "text": "introduce",
+      "speaker": "B",
+      "confidence": 0.9996745
+    },
+    {
+      "start": 26.64,
+      "end": 26.84,
+      "text": "you",
+      "speaker": "B",
+      "confidence": 0.98876953
+    },
+    {
+      "start": 26.84,
+      "end": 27.0,
+      "text": "a",
+      "speaker": "B",
+      "confidence": 0.99853516
+    },
+    {
+      "start": 27.0,
+      "end": 27.4,
+      "text": "platform",
+      "speaker": "B",
+      "confidence": 0.98535156
+    },
+    {
+      "start": 27.4,
+      "end": 27.64,
+      "text": "which",
+      "speaker": "B",
+      "confidence": 0.99658203
+    },
+    {
+      "start": 27.64,
+      "end": 27.8,
+      "text": "is",
+      "speaker": "B",
+      "confidence": 0.99609375
+    },
+    {
+      "start": 27.8,
+      "end": 28.12,
+      "text": "simple",
+      "speaker": "B",
+      "confidence": 0.98535156
+    },
+    {
+      "start": 28.12,
+      "end": 28.44,
+      "text": "AI.",
+      "speaker": "B",
+      "confidence": 0.93652344
+    },
+    {
+      "start": 28.44,
+      "end": 28.6,
+      "text": "What?",
+      "speaker": "B",
+      "confidence": 0.9980469
+    },
+    {
+      "start": 28.6,
+      "end": 28.92,
+      "text": "Simple",
+      "speaker": "B",
+      "confidence": 0.9477539
+    },
+    {
+      "start": 28.92,
+      "end": 29.16,
+      "text": "AI",
+      "speaker": "B",
+      "confidence": 0.84521484
+    },
+    {
+      "start": 29.16,
+      "end": 29.44,
+      "text": "does",
+      "speaker": "B",
+      "confidence": 0.9970703
+    },
+    {
+      "start": 29.76,
+      "end": 29.92,
+      "text": "it",
+      "speaker": "B",
+      "confidence": 0.9863281
+    },
+    {
+      "start": 29.92,
+      "end": 30.28,
+      "text": "basically",
+      "speaker": "B",
+      "confidence": 0.7783203
+    },
+    {
+      "start": 30.28,
+      "end": 30.88,
+      "text": "streamline",
+      "speaker": "B",
+      "confidence": 0.9689128
+    },
+    {
+      "start": 30.88,
+      "end": 31.04,
+      "text": "the",
+      "speaker": "B",
+      "confidence": 0.828125
+    },
+    {
+      "start": 31.04,
+      "end": 31.6,
+      "text": "operations",
+      "speaker": "B",
+      "confidence": 0.9992676
+    },
+    {
+      "start": 31.68,
+      "end": 32.0,
+      "text": "like",
+      "speaker": "B",
+      "confidence": 0.9980469
+    },
+    {
+      "start": 32.0,
+      "end": 32.44,
+      "text": "credit",
+      "speaker": "B",
+      "confidence": 0.9968262
+    },
+    {
+      "start": 32.44,
+      "end": 33.04,
+      "text": "underwriting,",
+      "speaker": "B",
+      "confidence": 0.798584
+    },
+    {
+      "start": 33.04,
+      "end": 33.44,
+      "text": "financial",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 33.6,
+      "end": 34.28,
+      "text": "spreading,",
+      "speaker": "B",
+      "confidence": 0.99869794
+    },
+    {
+      "start": 34.28,
+      "end": 34.6,
+      "text": "risk",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 34.6,
+      "end": 35.36,
+      "text": "monitoring",
+      "speaker": "B",
+      "confidence": 0.9998372
+    },
+    {
+      "start": 35.6,
+      "end": 35.92,
+      "text": "and",
+      "speaker": "B",
+      "confidence": 0.9892578
+    },
+    {
+      "start": 35.92,
+      "end": 36.44,
+      "text": "automating",
+      "speaker": "B",
+      "confidence": 0.9482422
+    },
+    {
+      "start": 36.44,
+      "end": 36.76,
+      "text": "by",
+      "speaker": "B",
+      "confidence": 0.98828125
+    },
+    {
+      "start": 36.76,
+      "end": 37.08,
+      "text": "using",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 37.08,
+      "end": 37.52,
+      "text": "AI",
+      "speaker": "B",
+      "confidence": 0.99072266
+    },
+    {
+      "start": 37.52,
+      "end": 38.08,
+      "text": "agents.",
+      "speaker": "B",
+      "confidence": 0.99902344
+    },
+    {
+      "start": 38.32,
+      "end": 38.72,
+      "text": "Wanted",
+      "speaker": "B",
+      "confidence": 0.984375
+    },
+    {
+      "start": 38.72,
+      "end": 38.84,
+      "text": "to",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 38.84,
+      "end": 39.0,
+      "text": "know,",
+      "speaker": "B",
+      "confidence": 0.9980469
+    },
+    {
+      "start": 39.0,
+      "end": 39.12,
+      "text": "are",
+      "speaker": "B",
+      "confidence": 0.98779297
+    },
+    {
+      "start": 39.12,
+      "end": 39.24,
+      "text": "you",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 39.24,
+      "end": 39.52,
+      "text": "currently",
+      "speaker": "B",
+      "confidence": 0.99902344
+    },
+    {
+      "start": 39.52,
+      "end": 39.92,
+      "text": "using",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 39.92,
+      "end": 40.36,
+      "text": "AI",
+      "speaker": "B",
+      "confidence": 0.9975586
+    },
+    {
+      "start": 40.36,
+      "end": 40.52,
+      "text": "to",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 40.52,
+      "end": 40.92,
+      "text": "simplify",
+      "speaker": "B",
+      "confidence": 0.87402344
+    },
+    {
+      "start": 40.92,
+      "end": 41.2,
+      "text": "these",
+      "speaker": "B",
+      "confidence": 0.9946289
+    },
+    {
+      "start": 41.2,
+      "end": 41.4,
+      "text": "kind",
+      "speaker": "B",
+      "confidence": 0.96191406
+    },
+    {
+      "start": 41.4,
+      "end": 41.56,
+      "text": "of",
+      "speaker": "B",
+      "confidence": 0.89208984
+    },
+    {
+      "start": 41.56,
+      "end": 42.16,
+      "text": "processes?",
+      "speaker": "B",
+      "confidence": 0.99853516
+    },
+    {
+      "start": 42.8,
+      "end": 43.16,
+      "text": "Actually",
+      "speaker": "A",
+      "confidence": 0.9868164
+    },
+    {
+      "start": 43.16,
+      "end": 43.4,
+      "text": "we",
+      "speaker": "A",
+      "confidence": 0.99902344
+    },
+    {
+      "start": 43.4,
+      "end": 43.6,
+      "text": "are",
+      "speaker": "A",
+      "confidence": 0.9941406
+    },
+    {
+      "start": 43.6,
+      "end": 43.92,
+      "text": "using",
+      "speaker": "A",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 43.92,
+      "end": 44.68,
+      "text": "Microsoft",
+      "speaker": "A",
+      "confidence": 0.99970704
+    },
+    {
+      "start": 44.68,
+      "end": 45.2,
+      "text": "AI",
+      "speaker": "A",
+      "confidence": 0.95703125
+    },
+    {
+      "start": 45.36,
+      "end": 45.96,
+      "text": "framework",
+      "speaker": "A",
+      "confidence": 0.9895833
+    },
+    {
+      "start": 45.96,
+      "end": 46.28,
+      "text": "in",
+      "speaker": "A",
+      "confidence": 0.9863281
+    },
+    {
+      "start": 46.28,
+      "end": 46.64,
+      "text": "our",
+      "speaker": "A",
+      "confidence": 0.87060547
+    },
+    {
+      "start": 48.24,
+      "end": 48.88,
+      "text": "Dynamics",
+      "speaker": "A",
+      "confidence": 0.92753905
+    },
+    {
+      "start": 48.88,
+      "end": 49.16,
+      "text": "and",
+      "speaker": "A",
+      "confidence": 0.64941406
+    },
+    {
+      "start": 49.16,
+      "end": 49.48,
+      "text": "Business",
+      "speaker": "A",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 49.48,
+      "end": 49.84,
+      "text": "Central",
+      "speaker": "A",
+      "confidence": 0.9941406
+    },
+    {
+      "start": 49.92,
+      "end": 50.32,
+      "text": "actually.",
+      "speaker": "A",
+      "confidence": 0.9785156
+    },
+    {
+      "start": 50.88,
+      "end": 51.52,
+      "text": "Okay.",
+      "speaker": "B",
+      "confidence": 0.9246419
+    },
+    {
+      "start": 51.84,
+      "end": 52.24,
+      "text": "Yeah.",
+      "speaker": "A",
+      "confidence": 0.92854816
+    },
+    {
+      "start": 52.24,
+      "end": 52.44,
+      "text": "So",
+      "speaker": "A",
+      "confidence": 0.84814453
+    },
+    {
+      "start": 52.44,
+      "end": 52.6,
+      "text": "this",
+      "speaker": "A",
+      "confidence": 0.98828125
+    },
+    {
+      "start": 52.6,
+      "end": 52.76,
+      "text": "is",
+      "speaker": "A",
+      "confidence": 0.99658203
+    },
+    {
+      "start": 52.76,
+      "end": 52.88,
+      "text": "the",
+      "speaker": "A",
+      "confidence": 0.99902344
+    },
+    {
+      "start": 52.88,
+      "end": 53.08,
+      "text": "only",
+      "speaker": "A",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 53.08,
+      "end": 53.32,
+      "text": "thing",
+      "speaker": "A",
+      "confidence": 0.9975586
+    },
+    {
+      "start": 53.32,
+      "end": 53.52,
+      "text": "we",
+      "speaker": "A",
+      "confidence": 0.99902344
+    },
+    {
+      "start": 53.52,
+      "end": 53.72,
+      "text": "are",
+      "speaker": "A",
+      "confidence": 0.99560547
+    },
+    {
+      "start": 53.72,
+      "end": 54.0,
+      "text": "using",
+      "speaker": "A",
+      "confidence": 0.99853516
+    },
+    {
+      "start": 54.56,
+      "end": 55.0,
+      "text": "via",
+      "speaker": "A",
+      "confidence": 0.5533447
+    },
+    {
+      "start": 55.0,
+      "end": 55.44,
+      "text": "UI.",
+      "speaker": "A",
+      "confidence": 0.96728516
+    },
+    {
+      "start": 56.19,
+      "end": 56.59,
+      "text": "Okay.",
+      "speaker": "A",
+      "confidence": 0.9506836
+    },
+    {
+      "start": 56.91,
+      "end": 57.15,
+      "text": "So",
+      "speaker": "B",
+      "confidence": 0.9951172
+    },
+    {
+      "start": 57.15,
+      "end": 57.27,
+      "text": "you",
+      "speaker": "B",
+      "confidence": 0.9794922
+    },
+    {
+      "start": 57.27,
+      "end": 57.47,
+      "text": "know",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 57.47,
+      "end": 57.71,
+      "text": "we",
+      "speaker": "B",
+      "confidence": 0.87939453
+    },
+    {
+      "start": 57.71,
+      "end": 57.99,
+      "text": "are",
+      "speaker": "B",
+      "confidence": 0.9951172
+    },
+    {
+      "start": 57.99,
+      "end": 58.35,
+      "text": "40,",
+      "speaker": "B",
+      "confidence": 0.99805
+    },
+    {
+      "start": 58.67,
+      "end": 58.99,
+      "text": "cost",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 58.99,
+      "end": 59.47,
+      "text": "effective",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 59.47,
+      "end": 59.67,
+      "text": "and",
+      "speaker": "B",
+      "confidence": 0.6738281
+    },
+    {
+      "start": 59.67,
+      "end": 59.83,
+      "text": "any",
+      "speaker": "B",
+      "confidence": 0.99609375
+    },
+    {
+      "start": 59.83,
+      "end": 59.99,
+      "text": "other",
+      "speaker": "B",
+      "confidence": 0.9946289
+    },
+    {
+      "start": 59.99,
+      "end": 60.19,
+      "text": "tool",
+      "speaker": "B",
+      "confidence": 0.99853516
+    },
+    {
+      "start": 60.19,
+      "end": 60.35,
+      "text": "in",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 60.35,
+      "end": 60.43,
+      "text": "the",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 60.43,
+      "end": 60.67,
+      "text": "market.",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 60.75,
+      "end": 61.03,
+      "text": "So",
+      "speaker": "B",
+      "confidence": 0.9980469
+    },
+    {
+      "start": 61.03,
+      "end": 61.31,
+      "text": "just",
+      "speaker": "B",
+      "confidence": 0.9980469
+    },
+    {
+      "start": 61.39,
+      "end": 61.67,
+      "text": "if",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 61.67,
+      "end": 61.83,
+      "text": "you",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 61.83,
+      "end": 61.99,
+      "text": "are",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 61.99,
+      "end": 62.23,
+      "text": "open",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 62.23,
+      "end": 62.47,
+      "text": "for",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 62.47,
+      "end": 62.59,
+      "text": "a",
+      "speaker": "B",
+      "confidence": 0.99902344
+    },
+    {
+      "start": 62.59,
+      "end": 62.83,
+      "text": "quick",
+      "speaker": "B",
+      "confidence": 0.99853516
+    },
+    {
+      "start": 62.83,
+      "end": 63.15,
+      "text": "30",
+      "speaker": "B",
+      "confidence": 0.97314
+    },
+    {
+      "start": 63.15,
+      "end": 63.51,
+      "text": "minute,",
+      "speaker": "B",
+      "confidence": 0.8093262
+    },
+    {
+      "start": 63.51,
+      "end": 63.79,
+      "text": "15",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 63.79,
+      "end": 63.95,
+      "text": "to",
+      "speaker": "B",
+      "confidence": 0.9980469
+    },
+    {
+      "start": 63.95,
+      "end": 64.11,
+      "text": "30",
+      "speaker": "B",
+      "confidence": 0.99805
+    },
+    {
+      "start": 64.11,
+      "end": 64.51,
+      "text": "minutes",
+      "speaker": "B",
+      "confidence": 0.9987793
+    },
+    {
+      "start": 64.51,
+      "end": 64.83,
+      "text": "call",
+      "speaker": "B",
+      "confidence": 0.9975586
+    },
+    {
+      "start": 64.91,
+      "end": 65.51,
+      "text": "speech,",
+      "speaker": "B",
+      "confidence": 0.5979004
+    },
+    {
+      "start": 65.51,
+      "end": 65.79,
+      "text": "like",
+      "speaker": "B",
+      "confidence": 0.9921875
+    },
+    {
+      "start": 65.79,
+      "end": 65.99,
+      "text": "how",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 65.99,
+      "end": 66.15,
+      "text": "we",
+      "speaker": "B",
+      "confidence": 0.99902344
+    },
+    {
+      "start": 66.15,
+      "end": 66.31,
+      "text": "can",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 66.31,
+      "end": 66.59,
+      "text": "ease",
+      "speaker": "B",
+      "confidence": 0.76538086
+    },
+    {
+      "start": 66.59,
+      "end": 66.83,
+      "text": "your",
+      "speaker": "B",
+      "confidence": 0.9980469
+    },
+    {
+      "start": 66.83,
+      "end": 67.15,
+      "text": "process,",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 67.23,
+      "end": 67.51,
+      "text": "how",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 67.51,
+      "end": 67.63,
+      "text": "we",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 67.63,
+      "end": 67.79,
+      "text": "can",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 67.79,
+      "end": 68.27,
+      "text": "simplify",
+      "speaker": "B",
+      "confidence": 0.90234375
+    },
+    {
+      "start": 68.27,
+      "end": 68.55,
+      "text": "your",
+      "speaker": "B",
+      "confidence": 0.9946289
+    },
+    {
+      "start": 68.55,
+      "end": 68.83,
+      "text": "process.",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 69.23,
+      "end": 69.47,
+      "text": "So",
+      "speaker": "B",
+      "confidence": 0.99658203
+    },
+    {
+      "start": 69.47,
+      "end": 69.59,
+      "text": "are",
+      "speaker": "B",
+      "confidence": 0.9916992
+    },
+    {
+      "start": 69.59,
+      "end": 69.79,
+      "text": "you",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 69.79,
+      "end": 70.07,
+      "text": "open",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 70.07,
+      "end": 70.31,
+      "text": "for",
+      "speaker": "B",
+      "confidence": 0.99902344
+    },
+    {
+      "start": 70.31,
+      "end": 70.55,
+      "text": "that",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 70.55,
+      "end": 70.79,
+      "text": "for",
+      "speaker": "B",
+      "confidence": 0.99853516
+    },
+    {
+      "start": 70.79,
+      "end": 70.99,
+      "text": "just",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 70.99,
+      "end": 71.23,
+      "text": "15",
+      "speaker": "B",
+      "confidence": 0.99951
+    },
+    {
+      "start": 71.23,
+      "end": 71.469,
+      "text": "to",
+      "speaker": "B",
+      "confidence": 0.9921875
+    },
+    {
+      "start": 71.469,
+      "end": 71.669,
+      "text": "30",
+      "speaker": "B",
+      "confidence": 0.99951
+    },
+    {
+      "start": 71.669,
+      "end": 71.95,
+      "text": "minutes",
+      "speaker": "B",
+      "confidence": 0.78100586
+    },
+    {
+      "start": 71.95,
+      "end": 72.15,
+      "text": "where",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 72.15,
+      "end": 72.31,
+      "text": "we",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 72.31,
+      "end": 72.47,
+      "text": "can",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 72.47,
+      "end": 72.63,
+      "text": "show",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 72.63,
+      "end": 72.79,
+      "text": "you",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 72.79,
+      "end": 72.99,
+      "text": "the",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 72.99,
+      "end": 73.39,
+      "text": "demo",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 73.39,
+      "end": 73.87,
+      "text": "platform",
+      "speaker": "B",
+      "confidence": 0.99975586
+    },
+    {
+      "start": 74.19,
+      "end": 74.47,
+      "text": "and",
+      "speaker": "B",
+      "confidence": 0.9926758
+    },
+    {
+      "start": 74.47,
+      "end": 74.71,
+      "text": "without",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 74.71,
+      "end": 74.99,
+      "text": "any",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 74.99,
+      "end": 75.27,
+      "text": "business",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 75.27,
+      "end": 76.03,
+      "text": "expectations",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 76.03,
+      "end": 76.43,
+      "text": "like",
+      "speaker": "B",
+      "confidence": 0.9941406
+    },
+    {
+      "start": 76.75,
+      "end": 77.23,
+      "text": "nothing.",
+      "speaker": "B",
+      "confidence": 0.96484375
+    },
+    {
+      "start": 78.27,
+      "end": 78.51,
+      "text": "I",
+      "speaker": "A",
+      "confidence": 0.91308594
+    },
+    {
+      "start": 78.51,
+      "end": 78.63,
+      "text": "know,",
+      "speaker": "A",
+      "confidence": 0.98046875
+    },
+    {
+      "start": 78.63,
+      "end": 78.79,
+      "text": "I",
+      "speaker": "A",
+      "confidence": 0.7402344
+    },
+    {
+      "start": 78.79,
+      "end": 78.99,
+      "text": "know.",
+      "speaker": "A",
+      "confidence": 0.9951172
+    },
+    {
+      "start": 78.99,
+      "end": 79.15,
+      "text": "The",
+      "speaker": "A",
+      "confidence": 0.99658203
+    },
+    {
+      "start": 79.15,
+      "end": 79.27,
+      "text": "thing",
+      "speaker": "A",
+      "confidence": 0.99902344
+    },
+    {
+      "start": 79.27,
+      "end": 79.55,
+      "text": "is",
+      "speaker": "A",
+      "confidence": 0.9975586
+    },
+    {
+      "start": 79.63,
+      "end": 79.99,
+      "text": "actually",
+      "speaker": "A",
+      "confidence": 0.99853516
+    },
+    {
+      "start": 79.99,
+      "end": 80.27,
+      "text": "right",
+      "speaker": "A",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 80.27,
+      "end": 80.47,
+      "text": "now",
+      "speaker": "A",
+      "confidence": 0.99902344
+    },
+    {
+      "start": 80.47,
+      "end": 80.67,
+      "text": "I'm",
+      "speaker": "A",
+      "confidence": 0.97770184
+    },
+    {
+      "start": 80.67,
+      "end": 80.91,
+      "text": "on",
+      "speaker": "A",
+      "confidence": 0.98535156
+    },
+    {
+      "start": 80.99,
+      "end": 81.47,
+      "text": "leave",
+      "speaker": "A",
+      "confidence": 0.9626465
+    },
+    {
+      "start": 81.71,
+      "end": 82.11,
+      "text": "like",
+      "speaker": "A",
+      "confidence": 0.9707031
+    },
+    {
+      "start": 82.43,
+      "end": 82.75,
+      "text": "for",
+      "speaker": "A",
+      "confidence": 0.9873047
+    },
+    {
+      "start": 82.75,
+      "end": 83.07,
+      "text": "seven",
+      "speaker": "A",
+      "confidence": 0.9975586
+    },
+    {
+      "start": 83.07,
+      "end": 83.47,
+      "text": "days.",
+      "speaker": "A",
+      "confidence": 0.99902344
+    },
+    {
+      "start": 83.82,
+      "end": 83.94,
+      "text": "Can",
+      "speaker": "A",
+      "confidence": 0.7944336
+    },
+    {
+      "start": 83.94,
+      "end": 84.22,
+      "text": "you",
+      "speaker": "A",
+      "confidence": 0.76123047
+    },
+    {
+      "start": 84.22,
+      "end": 84.94,
+      "text": "schedule",
+      "speaker": "A",
+      "confidence": 0.90405273
+    },
+    {
+      "start": 85.5,
+      "end": 85.9,
+      "text": "on",
+      "speaker": "A",
+      "confidence": 0.98876953
+    },
+    {
+      "start": 86.78,
+      "end": 87.14,
+      "text": "next",
+      "speaker": "A",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 87.14,
+      "end": 87.5,
+      "text": "Monday?",
+      "speaker": "A",
+      "confidence": 0.8173828
+    },
+    {
+      "start": 88.3,
+      "end": 88.66,
+      "text": "Yeah,",
+      "speaker": "B",
+      "confidence": 0.9978841
+    },
+    {
+      "start": 88.66,
+      "end": 89.18,
+      "text": "definitely,",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 89.18,
+      "end": 89.42,
+      "text": "that",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 89.42,
+      "end": 89.7,
+      "text": "works",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 89.7,
+      "end": 89.86,
+      "text": "for",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 89.86,
+      "end": 90.14,
+      "text": "me.",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 90.38,
+      "end": 90.74,
+      "text": "The",
+      "speaker": "B",
+      "confidence": 0.6220703
+    },
+    {
+      "start": 90.74,
+      "end": 91.02,
+      "text": "next",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 91.02,
+      "end": 91.26,
+      "text": "Monday",
+      "speaker": "B",
+      "confidence": 0.98779297
+    },
+    {
+      "start": 91.26,
+      "end": 91.58,
+      "text": "is",
+      "speaker": "B",
+      "confidence": 0.8979492
+    },
+    {
+      "start": 91.58,
+      "end": 91.98,
+      "text": "right?",
+      "speaker": "B",
+      "confidence": 0.98779297
+    },
+    {
+      "start": 92.7,
+      "end": 93.18,
+      "text": "Yeah,",
+      "speaker": "A",
+      "confidence": 0.88753253
+    },
+    {
+      "start": 93.5,
+      "end": 93.86,
+      "text": "yeah.",
+      "speaker": "A",
+      "confidence": 0.98860675
+    },
+    {
+      "start": 93.86,
+      "end": 94.06,
+      "text": "On",
+      "speaker": "B",
+      "confidence": 0.99902344
+    },
+    {
+      "start": 94.06,
+      "end": 94.46,
+      "text": "12th.",
+      "speaker": "B",
+      "confidence": 0.99886
+    },
+    {
+      "start": 94.46,
+      "end": 94.66,
+      "text": "What",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 94.66,
+      "end": 94.86,
+      "text": "time",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 94.86,
+      "end": 95.06,
+      "text": "you",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 95.06,
+      "end": 95.18,
+      "text": "are",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 95.18,
+      "end": 95.42,
+      "text": "available?",
+      "speaker": "B",
+      "confidence": 0.9921875
+    },
+    {
+      "start": 95.42,
+      "end": 95.7,
+      "text": "Could",
+      "speaker": "B",
+      "confidence": 0.99902344
+    },
+    {
+      "start": 95.7,
+      "end": 95.86,
+      "text": "you",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 95.86,
+      "end": 96.06,
+      "text": "please",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 96.06,
+      "end": 96.26,
+      "text": "let",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 96.26,
+      "end": 96.42,
+      "text": "me",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 96.42,
+      "end": 96.7,
+      "text": "know?",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 97.18,
+      "end": 97.5,
+      "text": "I",
+      "speaker": "A",
+      "confidence": 0.9970703
+    },
+    {
+      "start": 97.5,
+      "end": 97.74,
+      "text": "will",
+      "speaker": "A",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 97.74,
+      "end": 97.94,
+      "text": "be",
+      "speaker": "A",
+      "confidence": 1.0
+    },
+    {
+      "start": 97.94,
+      "end": 98.22,
+      "text": "available",
+      "speaker": "A",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 98.38,
+      "end": 98.78,
+      "text": "around",
+      "speaker": "A",
+      "confidence": 1.0
+    },
+    {
+      "start": 98.78,
+      "end": 99.608,
+      "text": "1:30,",
+      "speaker": "A",
+      "confidence": 0.9967
+    },
+    {
+      "start": 99.792,
+      "end": 100.62,
+      "text": "1:30",
+      "speaker": "A",
+      "confidence": 0.9967
+    },
+    {
+      "start": 100.7,
+      "end": 101.02,
+      "text": "your",
+      "speaker": "A",
+      "confidence": 0.99853516
+    },
+    {
+      "start": 101.02,
+      "end": 101.26,
+      "text": "time.",
+      "speaker": "A",
+      "confidence": 0.99853516
+    },
+    {
+      "start": 101.26,
+      "end": 101.74,
+      "text": "GST,",
+      "speaker": "B",
+      "confidence": 0.9958496
+    },
+    {
+      "start": 101.74,
+      "end": 102.14,
+      "text": "right?",
+      "speaker": "B",
+      "confidence": 0.9980469
+    },
+    {
+      "start": 102.7,
+      "end": 103.18,
+      "text": "Yes.",
+      "speaker": "A",
+      "confidence": 0.92333984
+    },
+    {
+      "start": 103.5,
+      "end": 104.06,
+      "text": "Okay.",
+      "speaker": "B",
+      "confidence": 0.98030597
+    },
+    {
+      "start": 104.06,
+      "end": 104.26,
+      "text": "Could",
+      "speaker": "B",
+      "confidence": 0.99902344
+    },
+    {
+      "start": 104.26,
+      "end": 104.38,
+      "text": "you",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 104.38,
+      "end": 104.54,
+      "text": "please",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 104.54,
+      "end": 104.9,
+      "text": "confirm",
+      "speaker": "B",
+      "confidence": 0.8491211
+    },
+    {
+      "start": 104.9,
+      "end": 105.14,
+      "text": "email",
+      "speaker": "B",
+      "confidence": 0.64160156
+    },
+    {
+      "start": 105.14,
+      "end": 105.46,
+      "text": "address?",
+      "speaker": "B",
+      "confidence": 0.99902344
+    },
+    {
+      "start": 105.46,
+      "end": 105.66,
+      "text": "The",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 105.66,
+      "end": 105.82,
+      "text": "one",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 105.82,
+      "end": 106.02,
+      "text": "I",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 106.02,
+      "end": 106.22,
+      "text": "have,",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 106.22,
+      "end": 106.54,
+      "text": "is",
+      "speaker": "B",
+      "confidence": 0.99902344
+    },
+    {
+      "start": 106.54,
+      "end": 106.94,
+      "text": "it",
+      "speaker": "B",
+      "confidence": 0.93359375
+    },
+    {
+      "start": 107.26,
+      "end": 109.1,
+      "text": "dionidis@.com?",
+      "speaker": "B",
+      "confidence": 0.81757
+    },
+    {
+      "start": 109.1,
+      "end": 109.5,
+      "text": "Sorry,",
+      "speaker": "B",
+      "confidence": 0.9770508
+    },
+    {
+      "start": 109.76,
+      "end": 109.88,
+      "text": "is",
+      "speaker": "B",
+      "confidence": 0.94677734
+    },
+    {
+      "start": 109.88,
+      "end": 110.04,
+      "text": "it",
+      "speaker": "B",
+      "confidence": 0.9980469
+    },
+    {
+      "start": 110.04,
+      "end": 110.44,
+      "text": "correct?",
+      "speaker": "B",
+      "confidence": 0.9996745
+    },
+    {
+      "start": 110.44,
+      "end": 110.96,
+      "text": "Correct,",
+      "speaker": "A",
+      "confidence": 0.9900716
+    },
+    {
+      "start": 111.2,
+      "end": 111.68,
+      "text": "Correct.",
+      "speaker": "A",
+      "confidence": 0.9894206
+    },
+    {
+      "start": 111.68,
+      "end": 112.12,
+      "text": "Okay,",
+      "speaker": "B",
+      "confidence": 0.99853516
+    },
+    {
+      "start": 112.12,
+      "end": 112.44,
+      "text": "I'll",
+      "speaker": "B",
+      "confidence": 0.9744466
+    },
+    {
+      "start": 112.44,
+      "end": 112.6,
+      "text": "just",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 112.6,
+      "end": 112.76,
+      "text": "go",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 112.76,
+      "end": 112.92,
+      "text": "ahead",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 112.92,
+      "end": 113.08,
+      "text": "and",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 113.08,
+      "end": 113.32,
+      "text": "drop",
+      "speaker": "B",
+      "confidence": 0.99975586
+    },
+    {
+      "start": 113.32,
+      "end": 113.44,
+      "text": "you",
+      "speaker": "B",
+      "confidence": 0.98095703
+    },
+    {
+      "start": 113.44,
+      "end": 113.56,
+      "text": "a",
+      "speaker": "B",
+      "confidence": 0.59228516
+    },
+    {
+      "start": 113.56,
+      "end": 113.96,
+      "text": "calendar",
+      "speaker": "B",
+      "confidence": 0.84277344
+    },
+    {
+      "start": 113.96,
+      "end": 114.36,
+      "text": "invite",
+      "speaker": "B",
+      "confidence": 0.9868164
+    },
+    {
+      "start": 114.36,
+      "end": 114.52,
+      "text": "for",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 114.52,
+      "end": 114.68,
+      "text": "the",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 114.68,
+      "end": 114.96,
+      "text": "same",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 115.2,
+      "end": 115.52,
+      "text": "for",
+      "speaker": "B",
+      "confidence": 0.9926758
+    },
+    {
+      "start": 115.52,
+      "end": 115.96,
+      "text": "12th,",
+      "speaker": "B",
+      "confidence": 0.95361
+    },
+    {
+      "start": 115.96,
+      "end": 116.32,
+      "text": "Monday",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 116.48,
+      "end": 117.4,
+      "text": "1:30pm",
+      "speaker": "B",
+      "confidence": 0.93522
+    },
+    {
+      "start": 117.4,
+      "end": 117.72,
+      "text": "Right?",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 117.72,
+      "end": 118.0,
+      "text": "Your",
+      "speaker": "B",
+      "confidence": 0.9975586
+    },
+    {
+      "start": 118.0,
+      "end": 118.32,
+      "text": "time.",
+      "speaker": "B",
+      "confidence": 0.9980469
+    },
+    {
+      "start": 118.4,
+      "end": 118.92,
+      "text": "Okay.",
+      "speaker": "A",
+      "confidence": 0.99609375
+    },
+    {
+      "start": 118.92,
+      "end": 119.44,
+      "text": "Okay.",
+      "speaker": "A",
+      "confidence": 0.8460286
+    },
+    {
+      "start": 119.44,
+      "end": 119.84,
+      "text": "And",
+      "speaker": "B",
+      "confidence": 0.8520508
+    },
+    {
+      "start": 119.92,
+      "end": 120.24,
+      "text": "one",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 120.24,
+      "end": 120.44,
+      "text": "more",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 120.44,
+      "end": 120.72,
+      "text": "thing,",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 120.88,
+      "end": 121.16,
+      "text": "Is",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 121.16,
+      "end": 121.32,
+      "text": "this",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 121.32,
+      "end": 121.48,
+      "text": "your",
+      "speaker": "B",
+      "confidence": 0.99902344
+    },
+    {
+      "start": 121.48,
+      "end": 121.88,
+      "text": "WhatsApp",
+      "speaker": "B",
+      "confidence": 0.99365234
+    },
+    {
+      "start": 121.88,
+      "end": 122.12,
+      "text": "number?",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 122.12,
+      "end": 122.36,
+      "text": "Can",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 122.36,
+      "end": 122.56,
+      "text": "I",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 122.56,
+      "end": 122.76,
+      "text": "share",
+      "speaker": "B",
+      "confidence": 0.93066406
+    },
+    {
+      "start": 122.76,
+      "end": 122.96,
+      "text": "you",
+      "speaker": "B",
+      "confidence": 0.9970703
+    },
+    {
+      "start": 122.96,
+      "end": 123.16,
+      "text": "some",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 123.16,
+      "end": 123.44,
+      "text": "details",
+      "speaker": "B",
+      "confidence": 0.9992676
+    },
+    {
+      "start": 123.44,
+      "end": 123.56,
+      "text": "on",
+      "speaker": "B",
+      "confidence": 0.9946289
+    },
+    {
+      "start": 123.56,
+      "end": 124.0,
+      "text": "WhatsApp",
+      "speaker": "B",
+      "confidence": 0.86360675
+    },
+    {
+      "start": 124.0,
+      "end": 124.28,
+      "text": "as",
+      "speaker": "B",
+      "confidence": 0.67822266
+    },
+    {
+      "start": 124.28,
+      "end": 124.56,
+      "text": "well?",
+      "speaker": "B",
+      "confidence": 0.859375
+    },
+    {
+      "start": 124.56,
+      "end": 125.04,
+      "text": "Yeah.",
+      "speaker": "A",
+      "confidence": 0.9851888
+    },
+    {
+      "start": 125.52,
+      "end": 126.079,
+      "text": "Okay,",
+      "speaker": "B",
+      "confidence": 0.9899089
+    },
+    {
+      "start": 126.48,
+      "end": 126.8,
+      "text": "thank",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 126.8,
+      "end": 126.92,
+      "text": "you",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 126.92,
+      "end": 127.04,
+      "text": "so",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 127.04,
+      "end": 127.24,
+      "text": "much.",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 127.24,
+      "end": 127.52,
+      "text": "Thank",
+      "speaker": "B",
+      "confidence": 0.99975586
+    },
+    {
+      "start": 127.52,
+      "end": 127.6,
+      "text": "you",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 127.6,
+      "end": 127.72,
+      "text": "for",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 127.72,
+      "end": 127.88,
+      "text": "your",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 127.88,
+      "end": 128.08,
+      "text": "time.",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 128.08,
+      "end": 128.36,
+      "text": "I'll",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 128.36,
+      "end": 128.52,
+      "text": "just",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 128.52,
+      "end": 128.64,
+      "text": "go",
+      "speaker": "B",
+      "confidence": 0.99902344
+    },
+    {
+      "start": 128.64,
+      "end": 128.76,
+      "text": "ahead",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 128.76,
+      "end": 128.92,
+      "text": "and",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 128.92,
+      "end": 129.16,
+      "text": "drop",
+      "speaker": "B",
+      "confidence": 0.99975586
+    },
+    {
+      "start": 129.16,
+      "end": 129.32,
+      "text": "you",
+      "speaker": "B",
+      "confidence": 0.9819336
+    },
+    {
+      "start": 129.32,
+      "end": 129.48,
+      "text": "a",
+      "speaker": "B",
+      "confidence": 0.39013672
+    },
+    {
+      "start": 129.48,
+      "end": 129.72,
+      "text": "email",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 129.72,
+      "end": 129.92,
+      "text": "as",
+      "speaker": "B",
+      "confidence": 0.99902344
+    },
+    {
+      "start": 129.92,
+      "end": 130.16,
+      "text": "well.",
+      "speaker": "B",
+      "confidence": 0.58740234
+    },
+    {
+      "start": 130.4,
+      "end": 130.72,
+      "text": "Some",
+      "speaker": "B",
+      "confidence": 0.99902344
+    },
+    {
+      "start": 130.72,
+      "end": 131.0,
+      "text": "share",
+      "speaker": "B",
+      "confidence": 0.98779297
+    },
+    {
+      "start": 131.0,
+      "end": 131.28,
+      "text": "some",
+      "speaker": "B",
+      "confidence": 0.984375
+    },
+    {
+      "start": 131.28,
+      "end": 131.68,
+      "text": "details",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 131.68,
+      "end": 131.88,
+      "text": "as",
+      "speaker": "B",
+      "confidence": 0.99853516
+    },
+    {
+      "start": 131.88,
+      "end": 132.04,
+      "text": "well.",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 132.04,
+      "end": 132.48,
+      "text": "Okay.",
+      "speaker": "A",
+      "confidence": 0.99886066
+    },
+    {
+      "start": 132.88,
+      "end": 133.28,
+      "text": "And",
+      "speaker": "B",
+      "confidence": 0.59277344
+    },
+    {
+      "start": 133.36,
+      "end": 133.72,
+      "text": "let's",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 133.72,
+      "end": 134.16,
+      "text": "connect",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 134.16,
+      "end": 134.44,
+      "text": "on",
+      "speaker": "B",
+      "confidence": 0.99853516
+    },
+    {
+      "start": 134.44,
+      "end": 134.88,
+      "text": "12th.",
+      "speaker": "B",
+      "confidence": 0.81852
+    },
+    {
+      "start": 134.88,
+      "end": 135.12,
+      "text": "Thank",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 135.12,
+      "end": 135.24,
+      "text": "you",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 135.24,
+      "end": 135.4,
+      "text": "so",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 135.4,
+      "end": 135.64,
+      "text": "much.",
+      "speaker": "B",
+      "confidence": 1.0
+    },
+    {
+      "start": 135.64,
+      "end": 135.92,
+      "text": "Thank",
+      "speaker": "B",
+      "confidence": 0.99975586
+    },
+    {
+      "start": 135.92,
+      "end": 136.0,
+      "text": "you.",
+      "speaker": "B",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 136.0,
+      "end": 136.2,
+      "text": "Bye",
+      "speaker": "B",
+      "confidence": 0.9951172
+    },
+    {
+      "start": 136.2,
+      "end": 136.44,
+      "text": "bye.",
+      "speaker": "B",
+      "confidence": 0.9968262
+    },
+    {
+      "start": 136.44,
+      "end": 136.56,
+      "text": "Have",
+      "speaker": "A",
+      "confidence": 1.0
+    },
+    {
+      "start": 136.56,
+      "end": 136.64,
+      "text": "a",
+      "speaker": "A",
+      "confidence": 1.0
+    },
+    {
+      "start": 136.64,
+      "end": 136.76,
+      "text": "good",
+      "speaker": "A",
+      "confidence": 0.9995117
+    },
+    {
+      "start": 136.76,
+      "end": 137.04,
+      "text": "day.",
+      "speaker": "A",
+      "confidence": 0.99902344
+    },
+    {
+      "start": 137.36,
+      "end": 137.68,
+      "text": "Bye",
+      "speaker": "A",
+      "confidence": 0.9580078
+    },
+    {
+      "start": 137.68,
+      "end": 137.85,
+      "text": "bye.",
+      "speaker": "A",
+      "confidence": 0.96606445
+    }
+  ],
+  "positive_highlights": [
+    {
+      "speaker": "Speaker 2",
+      "text": "... tool in the market. So just if you are open for a quick 30 minute, 15 to 30 minutes call speech, like how we can ease your process, how we can simplify your process. So are you open for ...",
+      "highlight": "So just if you are open for a quick 30 minute, 15 to 30 minutes call speech, like how we can ease your process, how we can simplify your process."
+    },
+    {
+      "speaker": "Speaker 1",
+      "text": "...  kind of processes? Actually we are using Microsoft AI framework in our Dynamics and Business Central actually. Okay. Yeah. So this ...",
+      "highlight": "Actually we are using Microsoft AI framework in our Dynamics and Business Central actually."
+    },
+    {
+      "speaker": "Speaker 2",
+      "text": "... using via UI. Okay. So you know we are 40, cost effective and any other tool in the market. So just if you are  ...",
+      "highlight": "So you know we are 40, cost effective and any other tool in the market."
+    }
+  ],
+  "negative_highlights": [],
+  "dynamic_summary": "This sales/introduction call contains 29 conversation segments between 2 speakers, lasting approximately 2.3 minutes. The overall sentiment is neutral with positive customer engagement and interest in proceeding. Key discussion topics include: scheduling, product demonstration, pricing discussion.",
+  "dynamic_action_items": "\u2022 Schedule and prepare demonstration as discussed<br/>\u2022 Provide pricing information and quotes<br/>\u2022 Send calendar invite for scheduled meeting<br/>\u2022 Prioritize follow-up due to positive customer interest",
+  "dynamic_topics": [
+    "Introductions (4)",
+    "Demo Discussion (1)",
+    "Pricing (1)",
+    "Scheduling (1)",
+    "Call Confusion (1)",
+    "Product Discussion (2)"
+  ],
+  "timestamp": "2025-06-07T22:24:02.824240"
+}
