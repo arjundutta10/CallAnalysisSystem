@@ -3,7 +3,7 @@ It is a call analyser website where you can upload your call recording and it an
 It also provides the summary of the call recording and the next action which tells you what you should do after the call recording.
 You can also download a pdf of the file which tells you about all the key aspects of the call.
 
-ReadMe
+ReadMe:
 1. Open Visual Studio
 2. Open the CallAnalysisSystem folder
 3. Open a new terminal
